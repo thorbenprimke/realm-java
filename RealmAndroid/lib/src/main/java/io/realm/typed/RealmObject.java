@@ -14,4 +14,9 @@ public abstract class RealmObject {
     protected void realmSetRow(Row row) {
         this.row = row;
     }
+
+    @SuppressWarnings("UnusedDeclaration")
+    protected void setString(long columnIndex, String argument) {
+        row.setString(columnIndex, argument);
+    }
 }

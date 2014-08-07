@@ -16,6 +16,8 @@
 
 package io.realm.typed;
 
+import com.google.common.collect.HashBasedTable;
+import com.google.common.collect.Table;
 import com.google.dexmaker.Code;
 import com.google.dexmaker.Comparison;
 import com.google.dexmaker.DexMaker;
@@ -40,6 +42,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
@@ -133,6 +136,7 @@ public final class ProxyBuilder<T> {
     private Class<?>[] constructorArgTypes = new Class[0];
     private Object[] constructorArgValues = new Object[0];
     private Set<Class<?>> interfaces = new HashSet<Class<?>>();
+    private static Table<String, String, Long> fieldIndices = HashBasedTable.create();
 
     private ProxyBuilder(Class<T> clazz) {
         baseClass = clazz;
@@ -232,7 +236,7 @@ public final class ProxyBuilder<T> {
     public Class<? extends T> buildProxyClass() throws IOException {
         // try the cache to see if we've generated this one before
         @SuppressWarnings("unchecked") // we only populate the map with matching types
-                Class<? extends T> proxyClass = (Class) generatedProxyClasses.get(baseClass);
+        Class<? extends T> proxyClass = (Class) generatedProxyClasses.get(baseClass);
         if (proxyClass != null
                 && proxyClass.getClassLoader().getParent() == parentClassLoader
                 && interfaces.equals(asSet(proxyClass.getInterfaces()))) {
@@ -240,6 +244,13 @@ public final class ProxyBuilder<T> {
         }
 
         // the cache missed; generate the class
+        long index = 0;
+        String className = "L" + baseClass.getCanonicalName().replace(".", "/") + ";";
+        for (Field field : baseClass.getDeclaredFields()) {
+            fieldIndices.put(className, field.getName().toLowerCase(Locale.getDefault()), index);
+            index++;
+        }
+
         DexMaker dexMaker = new DexMaker();
         String generatedName = getMethodNameForProxyOf(baseClass);
         TypeId<? extends T> generatedType = TypeId.get("L" + generatedName + ";");
@@ -348,7 +359,9 @@ public final class ProxyBuilder<T> {
     }
 
     private static <T, G extends T> void generateCodeForAllMethods(DexMaker dexMaker,
-                                                                   TypeId<G> generatedType, Method[] methodsToProxy, TypeId<T> superclassType) {
+                                                                   TypeId<G> generatedType,
+                                                                   Method[] methodsToProxy,
+                                                                   TypeId<T> superclassType) {
         TypeId<InvocationHandler> handlerType = TypeId.get(InvocationHandler.class);
         TypeId<Method[]> methodArrayType = TypeId.get(Method[].class);
         FieldId<G, InvocationHandler> handlerField =
@@ -359,53 +372,31 @@ public final class ProxyBuilder<T> {
         TypeId<Object[]> objectArrayType = TypeId.get(Object[].class);
         MethodId<InvocationHandler, Object> methodInvoke = handlerType.getMethod(TypeId.OBJECT,
                 "invoke", TypeId.OBJECT, methodType, objectArrayType);
+
+        MethodId<G, Void> methodSetString = generatedType.getMethod(TypeId.VOID, "setString", TypeId.LONG, TypeId.STRING);
+
         for (int m = 0; m < methodsToProxy.length; ++m) {
-            /*
-             * If the 5th method on the superclass Example that can be overridden were to look like
-             * this:
-             *
-             *     public int doSomething(Bar param0, int param1) {
-             *         ...
-             *     }
-             *
-             * Then the following code will generate a method on the proxy that looks something
-             * like this:
-             *
-             *     public int doSomething(Bar param0, int param1) {
-             *         int methodIndex = 4;
-             *         Method[] allMethods = Example_Proxy.$__methodArray;
-             *         Method thisMethod = allMethods[methodIndex];
-             *         int argsLength = 2;
-             *         Object[] args = new Object[argsLength];
-             *         InvocationHandler localHandler = this.$__handler;
-             *         // for-loop begins
-             *         int p = 0;
-             *         Bar parameter0 = param0;
-             *         args[p] = parameter0;
-             *         p = 1;
-             *         int parameter1 = param1;
-             *         Integer boxed1 = Integer.valueOf(parameter1);
-             *         args[p] = boxed1;
-             *         // for-loop ends
-             *         Object result = localHandler.invoke(this, thisMethod, args);
-             *         Integer castResult = (Integer) result;
-             *         int unboxedResult = castResult.intValue();
-             *         return unboxedResult;
-             *     }
-             *
-             * Or, in more idiomatic Java:
-             *
-             *     public int doSomething(Bar param0, int param1) {
-             *         if ($__handler == null) {
-             *             return super.doSomething(param0, param1);
-             *         }
-             *         return __handler.invoke(this, __methodArray[4],
-             *                 new Object[] { param0, Integer.valueOf(param1) });
-             *     }
-             */
             Method method = methodsToProxy[m];
             String name = method.getName();
             Class<?>[] argClasses = method.getParameterTypes();
+
+            if (name.startsWith("set") && argClasses.length == 1) {
+                if (argClasses[0].equals(String.class)) {
+                    String columnName = name.substring(3).toLowerCase(Locale.getDefault());
+                    String className = superclassType.getName();
+                    long columnIndex = fieldIndices.get(className, columnName);
+                    MethodId<G, Void> methodId = generatedType.getMethod(TypeId.VOID, name, TypeId.STRING);
+                    Code code = dexMaker.declare(methodId, PUBLIC);
+                    Local<G> localThis = code.getThis(generatedType);
+                    Local<Long> localColumnIndex = code.newLocal(TypeId.LONG);
+                    code.loadConstant(localColumnIndex, columnIndex);
+                    Local<String> localParameter = code.getParameter(0, TypeId.STRING);
+                    code.invokeSuper(methodSetString, null, localThis, localColumnIndex, localParameter);
+                    code.returnVoid();
+                    continue;
+                }
+            }
+
             TypeId<?>[] argTypes = new TypeId<?>[argClasses.length];
             for (int i = 0; i < argTypes.length; ++i) {
                 argTypes[i] = TypeId.get(argClasses[i]);

@@ -3,8 +3,6 @@ package io.realm.typed;
 import android.content.Context;
 import android.os.Handler;
 
-import com.google.dexmaker.stock.ProxyBuilder;
-
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Field;
