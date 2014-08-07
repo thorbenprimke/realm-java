@@ -19,4 +19,9 @@ public abstract class RealmObject {
     protected void setString(long columnIndex, String argument) {
         row.setString(columnIndex, argument);
     }
+
+    @SuppressWarnings("UnusedDeclaration")
+    protected String getString(long columnIndex) {
+        return row.getString(columnIndex);
+    }
 }

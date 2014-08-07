@@ -374,11 +374,13 @@ public final class ProxyBuilder<T> {
                 "invoke", TypeId.OBJECT, methodType, objectArrayType);
 
         MethodId<G, Void> methodSetString = generatedType.getMethod(TypeId.VOID, "setString", TypeId.LONG, TypeId.STRING);
+        MethodId<G, String> methodGetString = generatedType.getMethod(TypeId.STRING, "getString", TypeId.LONG);
 
         for (int m = 0; m < methodsToProxy.length; ++m) {
             Method method = methodsToProxy[m];
             String name = method.getName();
             Class<?>[] argClasses = method.getParameterTypes();
+            Class<?> returnType = method.getReturnType();
 
             if (name.startsWith("set") && argClasses.length == 1) {
                 if (argClasses[0].equals(String.class)) {
@@ -397,11 +399,27 @@ public final class ProxyBuilder<T> {
                 }
             }
 
+            if (name.startsWith("get") && argClasses.length == 0) {
+                if (returnType.equals(String.class)) {
+                    String columnName = name.substring(3).toLowerCase(Locale.getDefault());
+                    String className = superclassType.getName();
+                    long columnIndex = fieldIndices.get(className, columnName);
+                    MethodId<G, String> methodId = generatedType.getMethod(TypeId.STRING, name);
+                    Code code = dexMaker.declare(methodId, PUBLIC);
+                    Local<G> localThis = code.getThis(generatedType);
+                    Local<Long> localColumnIndex = code.newLocal(TypeId.LONG);
+                    Local<String> returnValue = code.newLocal(TypeId.STRING);
+                    code.loadConstant(localColumnIndex, columnIndex);
+                    code.invokeSuper(methodGetString, returnValue, localThis, localColumnIndex);
+                    code.returnValue(returnValue);
+                    continue;
+                }
+            }
+
             TypeId<?>[] argTypes = new TypeId<?>[argClasses.length];
             for (int i = 0; i < argTypes.length; ++i) {
                 argTypes[i] = TypeId.get(argClasses[i]);
             }
-            Class<?> returnType = method.getReturnType();
             TypeId<?> resultType = TypeId.get(returnType);
             MethodId<T, ?> superMethod = superclassType.getMethod(resultType, name, argTypes);
             MethodId<?, ?> methodId = generatedType.getMethod(resultType, name, argTypes);
