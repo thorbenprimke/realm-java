@@ -628,6 +628,10 @@ public final class ProxyBuilder<T> {
     private void getMethodsToProxy(Set<MethodSetEntry> sink, Set<MethodSetEntry> seenFinalMethods,
                                    Class<?> c) {
         for (Method method : c.getDeclaredMethods()) {
+            if (method.getName().equals("realmSetRow") || method.getName().equals("realmGetRow")) {
+                // Skip RealmObject methods
+                continue;
+            }
             if ((method.getModifiers() & Modifier.FINAL) != 0) {
                 // Skip final methods, we can't override them. We
                 // also need to remember them, in case the same
