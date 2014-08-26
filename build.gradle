@@ -1,0 +1,115 @@
+apply plugin: 'cpp'
+
+model {
+    platforms {
+        androidArm
+        androidArmv7a
+        androidMips
+        androidIntel
+    }
+    toolChains {
+        androidArm(Gcc) {
+            def prefix = "arm-linux-androideabi-"
+            cCompiler.executable         = prefix + cCompiler.executable
+            cppCompiler.executable       = prefix + cppCompiler.executable
+            assembler.executable         = prefix + assembler.executable
+            linker.executable            = prefix + linker.executable
+            staticLibArchiver.executable = prefix + staticLibArchiver.executable
+            path "${rootDir}/standalone-toolchains/arm/bin"
+            target('androidArm')
+            target('androidArmv7a')
+        }
+        androidMips(Gcc) {
+            def prefix = "mipsel-linux-android-"
+            cCompiler.executable         = prefix + cCompiler.executable
+            cppCompiler.executable       = prefix + cppCompiler.executable
+            assembler.executable         = prefix + assembler.executable
+            linker.executable            = prefix + linker.executable
+            staticLibArchiver.executable = prefix + staticLibArchiver.executable
+            path "${rootDir}/standalone-toolchains/mips/bin"
+            target('androidMips')
+        }
+        androidIntel(Gcc) {
+            def prefix = "i686-linux-android-"
+            cCompiler.executable         = prefix + cCompiler.executable
+            cppCompiler.executable       = prefix + cppCompiler.executable
+            assembler.executable         = prefix + assembler.executable
+            linker.executable            = prefix + linker.executable
+            staticLibArchiver.executable = prefix + staticLibArchiver.executable
+            path "${rootDir}/standalone-toolchains/x86/bin"
+            target('androidIntel')
+        }
+    }
+    repositories {
+        libs(PrebuiltLibraries) {
+            tightdb {
+                headers.srcDirs "${rootDir}/core/include", "${rootDir}/core/include/tightdb"
+                binaries.withType(StaticLibraryBinary) {
+                    if (targetPlatform == platforms.androidArm) {
+                        staticLibraryFile = file("${rootDir}/core/libtightdb-android-arm.a")
+                    } else if (targetPlatform == platforms.androidArmv7a) {
+                        staticLibraryFile = file("${rootDir}/core/libtightdb-android-arm-v7a.a")
+                    } else if (targetPlatform == platforms.androidMips) {
+                        staticLibraryFile = file("${rootDir}/core/libtightdb-android-mips.a")
+                    } else if (targetPlatform == platforms.androidIntel) {
+                        staticLibraryFile = file("${rootDir}/core/libtightdb-android-x86.a")
+                    }
+                }
+            }
+        }
+    }
+}
+
+libraries {
+    jni {
+        binaries.withType(SharedLibraryBinary) {
+            cppCompiler.args '-Os'
+            cppCompiler.args "-I${rootDir}/core/include"
+            cppCompiler.args "-I${rootDir}/core/include/tightdb"
+            cppCompiler.define 'TIGHTDB_HAVE_CONFIG'
+            sharedLibraryFile = "librealm-${targetPlatform}.so"
+            lib library: 'tightdb', linkage: 'static'
+        }
+    }
+}
+
+sources {
+    jni {
+        cpp {
+            source {
+                srcDir 'realm_jni/src'
+                include '*.cpp'
+            }
+        }
+    }
+}
+
+task checkProperties(group: 'check', description: 'Check the user provided gradle.properties') << {
+    if (!ndkDir) {
+        throw new GradleException('The ndkDir property in the gradle.properties file is not set.')
+    } else if (ndkDir.endsWith('/')) {
+        throw new GradleException('The path provided in the ndkProperty in the gradle.properties ends with /')
+    } else if (!file(ndkDir).directory) {
+        throw new GradleException('The path provided in the ndkDir property in the gradle.properties is not a folder.')
+    } else if (!file(new File(ndkDir, 'RELEASE.TXT')).file) {
+        throw new GradleException('The path provided in the ndkDir property in the gradle.properties does not seem to be an Android NDK.')
+    }
+}
+
+def jniTasks = tasks.findAll { task -> task.name.contains('Jni') }
+jniTasks.each() { it.dependsOn checkProperties }
+
+for (platform in ['arm', 'mips', 'x86']) {
+    task "generateNdkToolchain${platform.capitalize()}"(type: Exec) {
+        group 'build setup'
+        description "Generate the NDK standalone toolchain for the ${platform.capitalize()} platform"
+        dependsOn { checkProperties }
+        outputs.dir new File("${rootDir}/standalone-toolchains/${platform}")
+        commandLine = [
+            "${ndkDir}/build/tools/make-standalone-toolchain.sh",
+            "--platform=android-${platform.contains('arm')?8:9}",
+            "--install-dir=${rootDir}/standalone-toolchains/${platform}",
+            "--arch=${platform}"
+        ]
+    }
+}
