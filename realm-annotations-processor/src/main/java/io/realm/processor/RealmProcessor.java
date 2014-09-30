@@ -23,6 +23,7 @@ import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.RoundEnvironment;
 import javax.annotation.processing.SupportedAnnotationTypes;
 import javax.annotation.processing.SupportedSourceVersion;
+import javax.lang.model.SourceVersion;
 import javax.lang.model.element.*;
 import javax.tools.Diagnostic;
 import java.io.IOException;
@@ -33,9 +34,9 @@ import java.util.Set;
 
 
 @SupportedAnnotationTypes({"io.realm.annotations.RealmClass", "io.realm.annotations.Ignore"})
-@SupportedSourceVersion(javax.lang.model.SourceVersion.RELEASE_6)
+@SupportedSourceVersion(SourceVersion.RELEASE_7)
 public class RealmProcessor extends AbstractProcessor {
-    Set<String> classesToValidate = new HashSet<String>();
+    Set<String> classesToValidate = new HashSet<>();
     boolean done = false;
 
     @Override
@@ -99,9 +100,7 @@ public class RealmProcessor extends AbstractProcessor {
                     new RealmProxyClassGenerator(processingEnv, className, packageName, fields);
             try {
                 sourceCodeGenerator.generate();
-            } catch (IOException e) {
-                error(e.getMessage());
-            } catch (UnsupportedOperationException e) {
+            } catch (IOException | UnsupportedOperationException e) {
                 error(e.getMessage());
             }
         }
