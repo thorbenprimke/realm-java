@@ -264,7 +264,7 @@ public class Realm {
      * Realm static constructor
      *
      * @param context an Android context
-     * @param key     a 32-byte encryption key
+     * @param key     a 64-byte encryption key
      * @param autoRefresh whether the Realm object and its derived objects (RealmResults and RealmObjects)
      *                    should be automatically refreshed with the event loop (requires to be in a thread with a Looper)
      * @return an instance of the Realm class
@@ -286,7 +286,7 @@ public class Realm {
      * It sets auto-refresh on
      *
      * @param context an Android {@link android.content.Context}
-     * @param key     a 32-byte encryption key
+     * @param key     a 64-byte encryption key
      * @return an instance of the Realm class
      * @throws RealmMigrationNeededException The model classes have been changed and the Realm
      *                                       must be migrated
@@ -307,7 +307,7 @@ public class Realm {
      *
      * @param context  an Android {@link android.content.Context}
      * @param fileName the name of the file to save the Realm to
-     * @param key      a 32-byte encryption key
+     * @param key      a 64-byte encryption key
      * @param autoRefresh whether the Realm object and its derived objects (RealmResults and RealmObjects)
      *                    should be automatically refreshed with the event loop (requires to be in a thread with a Looper)
      * @return an instance of the Realm class
@@ -326,7 +326,7 @@ public class Realm {
      * Realm static constructor
      *
      * @param writableFolder absolute path to a writable directory
-     * @param key            a 32-byte encryption key
+     * @param key            a 64-byte encryption key
      * @param autoRefresh whether the Realm object and its derived objects (RealmResults and RealmObjects)
      *                    should be automatically refreshed with the event loop (requires to be in a thread with a Looper)
      * @return an instance of the Realm class
@@ -347,7 +347,7 @@ public class Realm {
      *
      * @param writableFolder absolute path to a writable directory
      * @param filename       the name of the file to save the Realm to
-     * @param key            a 32-byte encryption key
+     * @param key            a 64-byte encryption key
      * @param autoRefresh whether the Realm object and its derived objects (RealmResults and RealmObjects)
      *                    should be automatically refreshed with the event loop (requires to be in a thread with a Looper)
      * @return an instance of the Realm class

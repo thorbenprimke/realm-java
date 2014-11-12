@@ -102,7 +102,7 @@ public class RealmEncryptionExample extends Activity {
         }
 
         // We need to generate a new secret key
-        keyData = new byte[32];
+        keyData = new byte[64];
         new SecureRandom().nextBytes(keyData);
 
         cipher.init(Cipher.WRAP_MODE, keyPair.getPublic());
