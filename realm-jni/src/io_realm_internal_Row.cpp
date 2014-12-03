@@ -127,6 +127,18 @@ JNIEXPORT jstring JNICALL Java_io_realm_internal_Row_nativeGetString
     return NULL;
 }
 
+JNIEXPORT jbyteArray JNICALL Java_io_realm_internal_Row_nativeGetString2
+  (JNIEnv* env, jobject, jlong nativeRowPtr, jlong columnIndex)
+{
+    if (!ROW_AND_COL_INDEX_AND_TYPE_VALID(env, ROW(nativeRowPtr), columnIndex, type_String))
+        return 0;
+
+    try {
+        return to_jbyteArray(env, ROW(nativeRowPtr)->get_string( S(columnIndex) ));
+    } CATCH_STD()
+    return NULL;
+}
+
 JNIEXPORT jbyteArray JNICALL Java_io_realm_internal_Row_nativeGetByteArray
   (JNIEnv* env, jobject, jlong nativeRowPtr, jlong columnIndex)
 {
@@ -262,6 +274,19 @@ JNIEXPORT void JNICALL Java_io_realm_internal_Row_nativeSetString
 
     try {
         JStringAccessor value2(env, value); // throws
+        ROW(nativeRowPtr)->set_string( S(columnIndex), value2);
+    } CATCH_STD()
+}
+
+JNIEXPORT void JNICALL Java_io_realm_internal_Row_nativeSetString2
+  (JNIEnv* env, jobject, jlong nativeRowPtr, jlong columnIndex, jbyteArray value)
+{
+    if (!ROW_AND_COL_INDEX_AND_TYPE_VALID(env, ROW(nativeRowPtr), columnIndex, type_String))
+        return;
+
+    try {
+        tightdb::StringData value2(reinterpret_cast<char*>(env->GetByteArrayElements(value, NULL)), S
+        (env->GetArrayLength(value)));
         ROW(nativeRowPtr)->set_string( S(columnIndex), value2);
     } CATCH_STD()
 }

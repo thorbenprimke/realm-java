@@ -432,6 +432,7 @@ bool GetBinaryData(JNIEnv* env, jobject jByteBuffer, tightdb::BinaryData& data);
 // See also http://en.wikipedia.org/wiki/UTF-8#Modified_UTF-8
 
 jstring to_jstring(JNIEnv*, tightdb::StringData);
+jbyteArray to_jbyteArray(JNIEnv*, tightdb::StringData);
 
 class JStringAccessor {
 public:

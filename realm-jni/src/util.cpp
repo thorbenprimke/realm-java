@@ -284,6 +284,18 @@ jstring to_jstring(JNIEnv* env, StringData str)
     }
 }
 
+jbyteArray to_jbyteArray(JNIEnv* env, StringData str) {
+    const char* in_begin = str.data();
+    const char* in_end   = str.data() + str.size();
+
+    jbyteArray jresult = env->NewByteArray(static_cast<jsize>(str.size()));
+    if (jresult) {
+        // throws
+        env->SetByteArrayRegion(jresult, 0, static_cast<jsize>(str.size()), reinterpret_cast<const jbyte*>(str.data()));
+    }
+    return jresult;
+}
+
 
 JStringAccessor::JStringAccessor(JNIEnv* env, jstring str)
 {
