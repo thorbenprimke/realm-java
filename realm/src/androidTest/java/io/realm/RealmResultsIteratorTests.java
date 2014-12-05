@@ -189,6 +189,17 @@ public class RealmResultsIteratorTests extends AndroidTestCase {
         assertEquals(sum(0, TEST_DATA_SIZE - 1), realmSum);
     }
 
+    public void testWritesInsideIterator() {
+        RealmResults<AllTypes> result = testRealm.allObjects(AllTypes.class);
+
+        // For..each uses RealmResults.iterator() in the byte code.
+        testRealm.beginTransaction();
+        for (AllTypes obj : result) {
+            obj.setColumnLong(obj.getColumnLong() + 1); // This should be OK, and not throw an exception
+        }
+        testRealm.commitTransaction();
+    }
+
     public void testIteratorRemove() {
         RealmResults<AllTypes> result = testRealm.allObjects(AllTypes.class);
 
