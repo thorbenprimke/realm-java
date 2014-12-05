@@ -1,0 +1,896 @@
+12-05 08:48:26.102    1556-1556/io.realm.memoryleak I/dalvikvm﹕ Could not find method android.content.res.TypedArray.getChangingConfigurations, referenced from method android.support.v7.internal.widget.TintTypedArray.getChangingConfigurations
+12-05 08:48:26.102    1556-1556/io.realm.memoryleak W/dalvikvm﹕ VFY: unable to resolve virtual method 364: Landroid/content/res/TypedArray;.getChangingConfigurations ()I
+12-05 08:48:26.102    1556-1556/io.realm.memoryleak D/dalvikvm﹕ VFY: replacing opcode 0x6e at 0x0002
+12-05 08:48:26.102    1556-1556/io.realm.memoryleak I/dalvikvm﹕ Could not find method android.content.res.TypedArray.getType, referenced from method android.support.v7.internal.widget.TintTypedArray.getType
+12-05 08:48:26.102    1556-1556/io.realm.memoryleak W/dalvikvm﹕ VFY: unable to resolve virtual method 386: Landroid/content/res/TypedArray;.getType (I)I
+12-05 08:48:26.102    1556-1556/io.realm.memoryleak D/dalvikvm﹕ VFY: replacing opcode 0x6e at 0x0002
+12-05 08:48:26.122    1556-1556/io.realm.memoryleak D/dalvikvm﹕ Trying to load lib /data/app-lib/io.realm.memoryleak-1/libtightdb-jni.so 0xa501fcb0
+12-05 08:48:26.122    1556-1556/io.realm.memoryleak D/dalvikvm﹕ Added shared lib /data/app-lib/io.realm.memoryleak-1/libtightdb-jni.so 0xa501fcb0
+12-05 08:48:26.162    1556-1556/io.realm.memoryleak D/libEGL﹕ loaded /system/lib/egl/libEGL_genymotion.so
+12-05 08:48:26.166    1556-1556/io.realm.memoryleak D/﹕ HostConnection::get() New Host Connection established 0xb8eea860, tid 1556
+12-05 08:48:26.174    1556-1556/io.realm.memoryleak D/libEGL﹕ loaded /system/lib/egl/libGLESv1_CM_genymotion.so
+12-05 08:48:26.178    1556-1556/io.realm.memoryleak D/libEGL﹕ loaded /system/lib/egl/libGLESv2_genymotion.so
+12-05 08:48:26.194    1556-1556/io.realm.memoryleak W/EGL_genymotion﹕ eglSurfaceAttrib not implemented
+12-05 08:48:26.194    1556-1556/io.realm.memoryleak E/OpenGLRenderer﹕ Getting MAX_TEXTURE_SIZE from GradienCache
+12-05 08:48:26.194    1556-1556/io.realm.memoryleak E/OpenGLRenderer﹕ MAX_TEXTURE_SIZE: 16384
+12-05 08:48:26.198    1556-1556/io.realm.memoryleak E/OpenGLRenderer﹕ Getting MAX_TEXTURE_SIZE from Caches::initConstraints()
+12-05 08:48:26.198    1556-1556/io.realm.memoryleak E/OpenGLRenderer﹕ MAX_TEXTURE_SIZE: 16384
+12-05 08:48:26.198    1556-1556/io.realm.memoryleak D/OpenGLRenderer﹕ Enabling debug mode 0
+12-05 08:48:26.206    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 212K, 9% free 2888K/3160K, paused 2ms+1ms, total 4ms
+12-05 08:48:26.222    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 281K, 11% free 2992K/3332K, paused 1ms+1ms, total 5ms
+12-05 08:48:26.310    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 346K, 12% free 3030K/3436K, paused 2ms+1ms, total 4ms
+12-05 08:48:26.342    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 330K, 12% free 3086K/3476K, paused 1ms+0ms, total 4ms
+12-05 08:48:26.374    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 348K, 12% free 3138K/3544K, paused 2ms+1ms, total 5ms
+12-05 08:48:26.398    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 351K, 12% free 3173K/3584K, paused 1ms+0ms, total 4ms
+12-05 08:48:26.422    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 338K, 12% free 3223K/3632K, paused 1ms+0ms, total 4ms
+12-05 08:48:26.434    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 334K, 11% free 3274K/3668K, paused 2ms+0ms, total 5ms
+12-05 08:48:26.470    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 346K, 11% free 3314K/3720K, paused 2ms+1ms, total 5ms
+12-05 08:48:26.482    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 345K, 12% free 3355K/3792K, paused 1ms+0ms, total 4ms
+12-05 08:48:26.526    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 326K, 11% free 3414K/3800K, paused 2ms+1ms, total 6ms
+12-05 08:48:26.542    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 346K, 11% free 3454K/3860K, paused 1ms+1ms, total 5ms
+12-05 08:48:26.582    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 346K, 12% free 3494K/3964K, paused 1ms+1ms, total 6ms
+12-05 08:48:26.630    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 317K, 11% free 3563K/3964K, paused 1ms+0ms, total 5ms
+12-05 08:48:26.646    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 348K, 11% free 3600K/4008K, paused 1ms+1ms, total 4ms
+12-05 08:48:26.686    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 343K, 10% free 3642K/4044K, paused 2ms+0ms, total 5ms
+12-05 08:48:26.702    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 346K, 10% free 3683K/4088K, paused 2ms+1ms, total 6ms
+12-05 08:48:26.742    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 344K, 10% free 3724K/4128K, paused 2ms+0ms, total 5ms
+12-05 08:48:26.754    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 345K, 13% free 3763K/4284K, paused 2ms+1ms, total 5ms
+12-05 08:48:26.798    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 303K, 11% free 3846K/4284K, paused 1ms+1ms, total 5ms
+12-05 08:48:26.846    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 352K, 10% free 3880K/4292K, paused 1ms+2ms, total 7ms
+12-05 08:48:26.862    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 343K, 10% free 3921K/4324K, paused 2ms+0ms, total 6ms
+12-05 08:48:26.898    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 345K, 10% free 3963K/4368K, paused 1ms+1ms, total 5ms
+12-05 08:48:26.950    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 344K, 10% free 4004K/4408K, paused 2ms+1ms, total 6ms
+12-05 08:48:26.966    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 343K, 10% free 4045K/4448K, paused 2ms+0ms, total 6ms
+12-05 08:48:27.006    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 345K, 10% free 4087K/4492K, paused 1ms+0ms, total 6ms
+12-05 08:48:27.010    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 53K, 10% free 4052K/4492K, paused 2ms, total 2ms
+12-05 08:48:27.010    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Grow heap (frag case) to 4.235MB for 235368-byte allocation
+12-05 08:48:27.014    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 153K, 13% free 4129K/4724K, paused 2ms, total 2ms
+12-05 08:48:27.054    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 302K, 11% free 4211K/4724K, paused 2ms+0ms, total 6ms
+12-05 08:48:27.074    1556-1560/io.realm.memoryleak D/dalvikvm﹕ GC_CONCURRENT freed 351K, 11% free 4245K/4724K, paused 2ms+1ms, total 8ms
+12-05 08:48:27.130    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 428K, 11% free 4332K/4816K, paused 4ms, total 4ms
+12-05 08:48:27.182    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 486K, 11% free 4390K/4932K, paused 2ms, total 3ms
+12-05 08:48:27.230    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 498K, 12% free 4454K/5008K, paused 4ms, total 5ms
+12-05 08:48:27.286    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 514K, 12% free 4522K/5092K, paused 3ms, total 3ms
+12-05 08:48:27.338    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 537K, 12% free 4591K/5184K, paused 3ms, total 4ms
+12-05 08:48:27.390    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 557K, 12% free 4663K/5276K, paused 4ms, total 4ms
+12-05 08:48:27.446    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 578K, 12% free 4738K/5372K, paused 5ms, total 5ms
+12-05 08:48:27.450    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 20K, 13% free 4724K/5372K, paused 4ms, total 4ms
+12-05 08:48:27.454    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Grow heap (frag case) to 5.003MB for 353044-byte allocation
+12-05 08:48:27.454    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 229K, 16% free 4839K/5720K, paused 2ms, total 2ms
+12-05 08:48:27.502    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 608K, 14% free 4941K/5720K, paused 6ms, total 7ms
+12-05 08:48:27.590    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 665K, 13% free 5023K/5744K, paused 5ms, total 7ms
+12-05 08:48:27.658    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 682K, 13% free 5113K/5852K, paused 4ms, total 5ms
+12-05 08:48:27.714    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 713K, 13% free 5203K/5972K, paused 5ms, total 5ms
+12-05 08:48:27.798    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 735K, 13% free 5300K/6092K, paused 5ms, total 5ms
+12-05 08:48:27.870    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 764K, 14% free 5400K/6220K, paused 5ms, total 6ms
+12-05 08:48:27.926    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 797K, 14% free 5503K/6356K, paused 6ms, total 7ms
+12-05 08:48:28.026    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 827K, 14% free 5609K/6492K, paused 5ms, total 5ms
+12-05 08:48:28.034    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 166K, 16% free 5501K/6492K, paused 7ms, total 7ms
+12-05 08:48:28.034    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Grow heap (frag case) to 5.930MB for 529560-byte allocation
+12-05 08:48:28.038    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 344K, 20% free 5673K/7012K, paused 4ms, total 4ms
+12-05 08:48:28.126    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 743K, 16% free 5918K/7012K, paused 5ms, total 6ms
+12-05 08:48:28.218    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 959K, 15% free 6028K/7044K, paused 6ms, total 7ms
+12-05 08:48:28.290    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 977K, 15% free 6159K/7192K, paused 6ms, total 7ms
+12-05 08:48:28.398    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1025K, 15% free 6287K/7368K, paused 7ms, total 7ms
+12-05 08:48:28.502    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1057K, 15% free 6423K/7536K, paused 7ms, total 8ms
+12-05 08:48:28.610    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1099K, 15% free 6564K/7720K, paused 6ms, total 6ms
+12-05 08:48:28.714    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1141K, 16% free 6711K/7908K, paused 9ms, total 10ms
+12-05 08:48:28.862    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1182K, 16% free 6866K/8104K, paused 7ms, total 8ms
+12-05 08:48:28.974    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1229K, 16% free 7023K/8308K, paused 7ms, total 8ms
+12-05 08:48:28.982    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 92K, 17% free 6963K/8308K, paused 7ms, total 7ms
+12-05 08:48:28.982    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Grow heap (frag case) to 7.611MB for 794332-byte allocation
+12-05 08:48:28.990    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 517K, 21% free 7222K/9084K, paused 8ms, total 8ms
+12-05 08:48:29.090    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1245K, 18% free 7482K/9084K, paused 8ms, total 9ms
+12-05 08:48:29.242    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1424K, 17% free 7652K/9132K, paused 6ms, total 7ms
+12-05 08:48:29.406    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1460K, 17% free 7840K/9356K, paused 12ms, total 13ms
+12-05 08:48:29.550    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1517K, 17% free 8034K/9608K, paused 9ms, total 11ms
+12-05 08:48:29.702    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1572K, 17% free 8240K/9868K, paused 12ms, total 14ms
+12-05 08:48:29.862    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1634K, 17% free 8450K/10140K, paused 9ms, total 11ms
+12-05 08:48:30.030    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1692K, 17% free 8672K/10420K, paused 11ms, total 12ms
+12-05 08:48:30.194    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1758K, 17% free 8901K/10716K, paused 10ms, total 11ms
+12-05 08:48:30.366    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1831K, 18% free 9136K/11024K, paused 11ms, total 12ms
+12-05 08:48:30.374    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 39K, 18% free 9112K/11024K, paused 9ms, total 9ms
+12-05 08:48:30.374    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Grow heap (frag case) to 10.087MB for 1191492-byte allocation
+12-05 08:48:30.386    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 775K, 23% free 9500K/12188K, paused 9ms, total 9ms
+12-05 08:48:30.590    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1950K, 20% free 9814K/12188K, paused 12ms, total 13ms
+12-05 08:48:30.806    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2107K, 18% free 10076K/12240K, paused 13ms, total 15ms
+12-05 08:48:31.026    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2178K, 18% free 10354K/12588K, paused 15ms, total 18ms
+12-05 08:48:31.246    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2261K, 18% free 10643K/12960K, paused 13ms, total 15ms
+12-05 08:48:31.470    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2352K, 19% free 10935K/13344K, paused 13ms, total 15ms
+12-05 08:48:31.726    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2427K, 19% free 11253K/13736K, paused 13ms, total 15ms
+12-05 08:48:31.954    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2530K, 19% free 11574K/14160K, paused 14ms, total 16ms
+12-05 08:48:32.226    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2617K, 19% free 11914K/14588K, paused 14ms, total 16ms
+12-05 08:48:32.482    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2717K, 19% free 12267K/15040K, paused 15ms, total 17ms
+12-05 08:48:32.498    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1K, 19% free 12266K/15040K, paused 15ms, total 15ms
+12-05 08:48:32.498    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Grow heap (frag case) to 13.736MB for 1787232-byte allocation
+12-05 08:48:32.510    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1163K, 24% free 12848K/16788K, paused 13ms, total 13ms
+12-05 08:48:32.810    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2953K, 21% free 13275K/16788K, paused 17ms, total 20ms
+12-05 08:48:33.098    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 3128K, 19% free 13672K/16856K, paused 16ms, total 18ms
+12-05 08:48:33.426    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 3250K, 20% free 14077K/17384K, paused 20ms, total 24ms
+12-05 08:48:33.762    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 3347K, 19% free 14521K/17924K, paused 22ms, total 26ms
+12-05 08:48:34.090    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 3495K, 20% free 14965K/18516K, paused 22ms, total 24ms
+12-05 08:48:34.470    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 3630K, 20% free 15422K/19108K, paused 23ms, total 26ms
+12-05 08:48:34.826    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 3762K, 20% free 15898K/19716K, paused 24ms, total 28ms
+12-05 08:48:35.178    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 3903K, 20% free 16393K/20352K, paused 20ms, total 24ms
+12-05 08:48:35.618    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4029K, 20% free 16927K/21012K, paused 26ms, total 29ms
+12-05 08:48:35.642    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 60K, 20% free 16887K/21012K, paused 21ms, total 21ms
+12-05 08:48:35.642    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Grow heap (frag case) to 19.100MB for 2680840-byte allocation
+12-05 08:48:35.658    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1745K, 25% free 17759K/23632K, paused 17ms, total 17ms
+12-05 08:48:36.086    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4335K, 22% free 18442K/23632K, paused 23ms, total 26ms
+12-05 08:48:36.538    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4659K, 20% free 19029K/23744K, paused 27ms, total 31ms
+12-05 08:48:36.974    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4824K, 20% free 19647K/24528K, paused 25ms, total 30ms
+12-05 08:48:37.470    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5008K, 20% free 20287K/25352K, paused 30ms, total 34ms
+12-05 08:48:37.962    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5202K, 21% free 20945K/26204K, paused 27ms, total 30ms
+12-05 08:48:38.502    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5388K, 21% free 21635K/27080K, paused 32ms, total 37ms
+12-05 08:48:39.014    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5587K, 21% free 22356K/28000K, paused 33ms, total 38ms
+12-05 08:48:39.586    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5794K, 21% free 23113K/28964K, paused 39ms, total 46ms
+12-05 08:48:40.182    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6038K, 21% free 23877K/29972K, paused 31ms, total 36ms
+12-05 08:48:40.210    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 262K, 21% free 23711K/29972K, paused 24ms, total 25ms
+12-05 08:48:40.214    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Grow heap (frag case) to 27.042MB for 4021252-byte allocation
+12-05 08:48:40.238    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2618K, 27% free 25019K/33900K, paused 26ms, total 26ms
+12-05 08:48:40.842    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6308K, 23% free 26148K/33900K, paused 35ms, total 40ms
+12-05 08:48:41.518    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6978K, 21% free 26986K/34020K, paused 39ms, total 47ms
+12-05 08:48:42.190    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7181K, 21% free 27899K/35136K, paused 36ms, total 43ms
+12-05 08:48:42.910    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7323K, 21% free 28768K/36148K, paused 38ms, total 45ms
+12-05 08:48:43.590    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7326K, 20% free 29634K/37016K, paused 39ms, total 46ms
+12-05 08:48:44.266    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7328K, 20% free 30499K/37884K, paused 39ms, total 47ms
+12-05 08:48:44.950    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7329K, 20% free 31363K/38748K, paused 43ms, total 49ms
+12-05 08:48:45.626    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7329K, 19% free 32226K/39612K, paused 41ms, total 47ms
+12-05 08:48:46.350    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7307K, 19% free 33113K/40476K, paused 42ms, total 50ms
+12-05 08:48:46.466    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2895K, 21% free 32149K/40476K, paused 39ms, total 40ms
+12-05 08:48:46.470    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Grow heap (frag case) to 37.202MB for 6031872-byte allocation
+12-05 08:48:46.502    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 3927K, 27% free 34113K/46368K, paused 32ms, total 32ms
+12-05 08:48:47.226    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6030K, 22% free 36275K/46368K, paused 47ms, total 53ms
+12-05 08:48:47.910    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7472K, 21% free 36994K/46368K, paused 45ms, total 50ms
+12-05 08:48:48.594    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7327K, 19% free 37858K/46368K, paused 50ms, total 56ms
+12-05 08:48:49.286    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7338K, 17% free 38712K/46368K, paused 52ms, total 58ms
+12-05 08:48:49.974    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7334K, 16% free 39570K/46960K, paused 53ms, total 58ms
+12-05 08:48:50.658    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7313K, 16% free 40451K/47820K, paused 52ms, total 58ms
+12-05 08:48:51.302    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7343K, 16% free 41300K/48700K, paused 49ms, total 55ms
+12-05 08:48:51.982    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7328K, 15% free 42163K/49548K, paused 48ms, total 54ms
+12-05 08:48:52.618    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7249K, 15% free 43011K/50412K, paused 55ms, total 61ms
+12-05 08:48:53.302    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7238K, 15% free 43856K/51260K, paused 59ms, total 66ms
+12-05 08:48:53.930    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7168K, 15% free 44658K/52104K, paused 54ms, total 60ms
+12-05 08:48:54.574    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7102K, 15% free 45461K/52908K, paused 62ms, total 67ms
+12-05 08:48:55.210    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7044K, 14% free 46309K/53712K, paused 57ms, total 64ms
+12-05 08:48:55.846    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6966K, 14% free 47094K/54560K, paused 55ms, total 60ms
+12-05 08:48:55.954    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2933K, 16% free 46012K/54560K, paused 41ms, total 42ms
+12-05 08:48:55.962    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Grow heap (frag case) to 53.616MB for 9047800-byte allocation
+12-05 08:48:56.002    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5890K, 23% free 48957K/63396K, paused 42ms, total 42ms
+12-05 08:48:56.746    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5800K, 20% free 51349K/63396K, paused 59ms, total 65ms
+12-05 08:48:57.402    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7498K, 18% free 52043K/63396K, paused 59ms, total 65ms
+12-05 08:48:58.090    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7318K, 17% free 52916K/63396K, paused 62ms, total 66ms
+12-05 08:48:58.726    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7356K, 16% free 53752K/63396K, paused 57ms, total 62ms
+12-05 08:48:59.382    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7338K, 14% free 54605K/63396K, paused 66ms, total 73ms
+12-05 08:49:00.026    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7200K, 13% free 55405K/63396K, paused 80ms, total 81ms
+12-05 08:49:00.614    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6702K, 13% free 55983K/63656K, paused 66ms, total 72ms
+12-05 08:49:01.146    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6443K, 12% free 56786K/64232K, paused 67ms, total 74ms
+12-05 08:49:01.726    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6512K, 12% free 57541K/65036K, paused 69ms, total 74ms
+12-05 08:49:02.302    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6417K, 12% free 58257K/65788K, paused 65ms, total 72ms
+12-05 08:49:02.830    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6328K, 12% free 59008K/66508K, paused 61ms, total 67ms
+12-05 08:49:03.362    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6287K, 12% free 59745K/67256K, paused 63ms, total 67ms
+12-05 08:49:03.938    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6266K, 12% free 60489K/67996K, paused 63ms, total 68ms
+12-05 08:49:04.474    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6300K, 11% free 61213K/68740K, paused 65ms, total 69ms
+12-05 08:49:05.006    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6276K, 11% free 61966K/69464K, paused 66ms, total 73ms
+12-05 08:49:05.542    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6185K, 11% free 62642K/70216K, paused 71ms, total 75ms
+12-05 08:49:06.074    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6061K, 11% free 63360K/70892K, paused 70ms, total 75ms
+12-05 08:49:06.598    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6071K, 11% free 64071K/71608K, paused 64ms, total 70ms
+12-05 08:49:07.134    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6038K, 11% free 64770K/72320K, paused 73ms, total 80ms
+12-05 08:49:07.626    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5973K, 11% free 65447K/73020K, paused 68ms, total 72ms
+12-05 08:49:08.158    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5926K, 11% free 66152K/73696K, paused 66ms, total 71ms
+12-05 08:49:08.662    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5840K, 11% free 66828K/74400K, paused 70ms, total 75ms
+12-05 08:49:09.190    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5800K, 11% free 67544K/75076K, paused 76ms, total 81ms
+12-05 08:49:09.686    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5795K, 11% free 68199K/75792K, paused 74ms, total 80ms
+12-05 08:49:09.802    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2175K, 12% free 67205K/75792K, paused 57ms, total 57ms
+12-05 08:49:09.806    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Grow heap (frag case) to 78.625MB for 13571692-byte allocation
+12-05 08:49:09.870    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 8835K, 20% free 71622K/89048K, paused 64ms, total 64ms
+12-05 08:49:10.562    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5665K, 17% free 74149K/89048K, paused 73ms, total 80ms
+12-05 08:49:11.178    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7523K, 16% free 74818K/89048K, paused 79ms, total 83ms
+12-05 08:49:11.846    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7332K, 16% free 75678K/89048K, paused 83ms, total 90ms
+12-05 08:49:12.478    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7335K, 15% free 76534K/89048K, paused 82ms, total 88ms
+12-05 08:49:13.138    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7340K, 14% free 77386K/89048K, paused 83ms, total 88ms
+12-05 08:49:13.762    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7329K, 13% free 78249K/89048K, paused 72ms, total 77ms
+12-05 08:49:14.394    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7347K, 12% free 79093K/89048K, paused 81ms, total 87ms
+12-05 08:49:15.050    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7253K, 11% free 79939K/89048K, paused 76ms, total 83ms
+12-05 08:49:15.558    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6509K, 10% free 80432K/89048K, paused 83ms, total 90ms
+12-05 08:49:16.054    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5833K, 10% free 80954K/89048K, paused 78ms, total 83ms
+12-05 08:49:16.510    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5324K, 9% free 81475K/89204K, paused 83ms, total 89ms
+12-05 08:49:16.962    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5233K, 9% free 82130K/89724K, paused 85ms, total 91ms
+12-05 08:49:17.442    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5207K, 9% free 82699K/90380K, paused 79ms, total 86ms
+12-05 08:49:17.882    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5126K, 9% free 83278K/90948K, paused 83ms, total 88ms
+12-05 08:49:18.326    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5052K, 9% free 83871K/91528K, paused 81ms, total 85ms
+12-05 08:49:18.762    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5032K, 9% free 84463K/92120K, paused 79ms, total 83ms
+12-05 08:49:19.194    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5033K, 9% free 85035K/92712K, paused 76ms, total 80ms
+12-05 08:49:19.642    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5005K, 9% free 85693K/93284K, paused 85ms, total 89ms
+12-05 08:49:20.038    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5060K, 9% free 86230K/93944K, paused 78ms, total 82ms
+12-05 08:49:20.478    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4864K, 9% free 86765K/94480K, paused 81ms, total 86ms
+12-05 08:49:20.914    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4885K, 9% free 87335K/95012K, paused 83ms, total 87ms
+12-05 08:49:21.334    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4868K, 8% free 87958K/95584K, paused 97ms, total 101ms
+12-05 08:49:21.782    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4889K, 9% free 88462K/96208K, paused 93ms, total 97ms
+12-05 08:49:22.206    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4799K, 8% free 89056K/96712K, paused 105ms, total 110ms
+12-05 08:49:22.654    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4811K, 8% free 89628K/97304K, paused 89ms, total 92ms
+12-05 08:49:23.042    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 96.083MB to 96.000MB
+12-05 08:49:23.046    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4696K, 8% free 90143K/97876K, paused 81ms, total 85ms
+12-05 08:49:23.442    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 96.561MB to 96.000MB
+12-05 08:49:23.446    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4599K, 8% free 90632K/98304K, paused 95ms, total 97ms
+12-05 08:49:23.794    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 96.885MB to 96.000MB
+12-05 08:49:23.794    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4107K, 8% free 90965K/98304K, paused 88ms, total 90ms
+12-05 08:49:24.150    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 97.209MB to 96.000MB
+12-05 08:49:24.154    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 3648K, 8% free 91296K/98304K, paused 93ms, total 95ms
+12-05 08:49:24.454    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 97.490MB to 96.000MB
+12-05 08:49:24.458    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 3268K, 7% free 91583K/98304K, paused 95ms, total 97ms
+12-05 08:49:24.738    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 97.764MB to 96.000MB
+12-05 08:49:24.742    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2920K, 7% free 91864K/98304K, paused 82ms, total 85ms
+12-05 08:49:24.982    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 97.985MB to 96.000MB
+12-05 08:49:24.982    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2590K, 7% free 92090K/98304K, paused 95ms, total 97ms
+12-05 08:49:25.222    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 98.192MB to 96.000MB
+12-05 08:49:25.226    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2342K, 7% free 92302K/98304K, paused 89ms, total 91ms
+12-05 08:49:25.466    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 98.369MB to 96.000MB
+12-05 08:49:25.470    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2078K, 6% free 92484K/98304K, paused 92ms, total 94ms
+12-05 08:49:25.650    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 98.518MB to 96.000MB
+12-05 08:49:25.654    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1842K, 6% free 92637K/98304K, paused 87ms, total 88ms
+12-05 08:49:25.870    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 98.677MB to 96.000MB
+12-05 08:49:25.874    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1635K, 6% free 92799K/98304K, paused 85ms, total 86ms
+12-05 08:49:26.010    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 98.813MB to 96.000MB
+12-05 08:49:26.010    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1460K, 6% free 92938K/98304K, paused 82ms, total 83ms
+12-05 08:49:26.182    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 98.911MB to 96.000MB
+12-05 08:49:26.182    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1308K, 6% free 93039K/98304K, paused 82ms, total 83ms
+12-05 08:49:26.306    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.011MB to 96.000MB
+12-05 08:49:26.310    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1145K, 6% free 93142K/98304K, paused 75ms, total 77ms
+12-05 08:49:26.470    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.102MB to 96.000MB
+12-05 08:49:26.474    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1022K, 6% free 93234K/98304K, paused 79ms, total 80ms
+12-05 08:49:26.594    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.180MB to 96.000MB
+12-05 08:49:26.594    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 911K, 6% free 93315K/98304K, paused 86ms, total 86ms
+12-05 08:49:26.722    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.253MB to 96.000MB
+12-05 08:49:26.722    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 809K, 5% free 93390K/98304K, paused 85ms, total 86ms
+12-05 08:49:26.846    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.315MB to 96.000MB
+12-05 08:49:26.846    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 722K, 5% free 93453K/98304K, paused 89ms, total 90ms
+12-05 08:49:26.970    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.372MB to 96.000MB
+12-05 08:49:26.970    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 643K, 5% free 93511K/98304K, paused 87ms, total 88ms
+12-05 08:49:27.050    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.372MB to 96.000MB
+12-05 08:49:27.050    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93511K/98304K, paused 80ms, total 80ms
+12-05 08:49:27.050    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 6136-byte allocation
+12-05 08:49:27.210    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.364MB to 96.000MB
+12-05 08:49:27.210    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed 9K, 5% free 93501K/98304K, paused 158ms, total 158ms
+12-05 08:49:27.306    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.420MB to 96.000MB
+12-05 08:49:27.306    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 593K, 5% free 93558K/98304K, paused 79ms, total 79ms
+12-05 08:49:27.426    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.461MB to 96.000MB
+12-05 08:49:27.426    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 524K, 5% free 93601K/98304K, paused 85ms, total 85ms
+12-05 08:49:27.538    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.504MB to 96.000MB
+12-05 08:49:27.538    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 462K, 5% free 93644K/98304K, paused 88ms, total 88ms
+12-05 08:49:27.634    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.540MB to 96.000MB
+12-05 08:49:27.634    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 412K, 5% free 93680K/98304K, paused 81ms, total 81ms
+12-05 08:49:27.750    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.572MB to 96.000MB
+12-05 08:49:27.754    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 367K, 5% free 93714K/98304K, paused 84ms, total 85ms
+12-05 08:49:27.850    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.601MB to 96.000MB
+12-05 08:49:27.850    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 325K, 5% free 93743K/98304K, paused 85ms, total 86ms
+12-05 08:49:27.950    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.626MB to 96.000MB
+12-05 08:49:27.950    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 291K, 5% free 93769K/98304K, paused 87ms, total 87ms
+12-05 08:49:28.078    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.649MB to 96.000MB
+12-05 08:49:28.078    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 259K, 5% free 93793K/98304K, paused 90ms, total 90ms
+12-05 08:49:28.174    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.669MB to 96.000MB
+12-05 08:49:28.174    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 231K, 5% free 93813K/98304K, paused 90ms, total 90ms
+12-05 08:49:28.266    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.687MB to 96.000MB
+12-05 08:49:28.270    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 207K, 5% free 93832K/98304K, paused 86ms, total 87ms
+12-05 08:49:28.386    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.704MB to 96.000MB
+12-05 08:49:28.386    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 184K, 5% free 93849K/98304K, paused 78ms, total 78ms
+12-05 08:49:28.478    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.717MB to 96.000MB
+12-05 08:49:28.478    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 165K, 5% free 93863K/98304K, paused 83ms, total 83ms
+12-05 08:49:28.558    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.730MB to 96.000MB
+12-05 08:49:28.558    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 148K, 5% free 93876K/98304K, paused 78ms, total 78ms
+12-05 08:49:28.646    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.742MB to 96.000MB
+12-05 08:49:28.646    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 133K, 5% free 93888K/98304K, paused 81ms, total 81ms
+12-05 08:49:28.722    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.752MB to 96.000MB
+12-05 08:49:28.722    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 119K, 5% free 93898K/98304K, paused 73ms, total 73ms
+12-05 08:49:28.814    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.761MB to 96.000MB
+12-05 08:49:28.818    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 106K, 5% free 93908K/98304K, paused 92ms, total 92ms
+12-05 08:49:28.966    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.769MB to 96.000MB
+12-05 08:49:28.966    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 96K, 5% free 93916K/98304K, paused 85ms, total 85ms
+12-05 08:49:29.058    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.777MB to 96.000MB
+12-05 08:49:29.062    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 86K, 5% free 93924K/98304K, paused 88ms, total 89ms
+12-05 08:49:29.150    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.784MB to 96.000MB
+12-05 08:49:29.150    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 78K, 5% free 93930K/98304K, paused 90ms, total 90ms
+12-05 08:49:29.242    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.790MB to 96.000MB
+12-05 08:49:29.242    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 70K, 5% free 93937K/98304K, paused 84ms, total 85ms
+12-05 08:49:29.326    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.794MB to 96.000MB
+12-05 08:49:29.326    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 63K, 5% free 93942K/98304K, paused 82ms, total 82ms
+12-05 08:49:29.406    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.799MB to 96.000MB
+12-05 08:49:29.406    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 57K, 5% free 93947K/98304K, paused 78ms, total 78ms
+12-05 08:49:29.490    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.804MB to 96.000MB
+12-05 08:49:29.494    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 52K, 5% free 93951K/98304K, paused 84ms, total 84ms
+12-05 08:49:29.582    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.808MB to 96.000MB
+12-05 08:49:29.582    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 47K, 5% free 93956K/98304K, paused 87ms, total 87ms
+12-05 08:49:29.670    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.812MB to 96.000MB
+12-05 08:49:29.670    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 43K, 5% free 93959K/98304K, paused 88ms, total 88ms
+12-05 08:49:29.762    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.815MB to 96.000MB
+12-05 08:49:29.766    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 39K, 5% free 93963K/98304K, paused 90ms, total 90ms
+12-05 08:49:29.846    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.818MB to 96.000MB
+12-05 08:49:29.846    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 35K, 5% free 93966K/98304K, paused 81ms, total 81ms
+12-05 08:49:29.926    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.821MB to 96.000MB
+12-05 08:49:29.926    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 32K, 5% free 93968K/98304K, paused 80ms, total 80ms
+12-05 08:49:30.018    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.823MB to 96.000MB
+12-05 08:49:30.018    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 30K, 5% free 93971K/98304K, paused 89ms, total 89ms
+12-05 08:49:30.098    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.826MB to 96.000MB
+12-05 08:49:30.098    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 27K, 5% free 93973K/98304K, paused 81ms, total 81ms
+12-05 08:49:30.194    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.828MB to 96.000MB
+12-05 08:49:30.194    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 24K, 5% free 93975K/98304K, paused 94ms, total 94ms
+12-05 08:49:30.282    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.829MB to 96.000MB
+12-05 08:49:30.282    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 22K, 5% free 93977K/98304K, paused 85ms, total 85ms
+12-05 08:49:30.366    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.831MB to 96.000MB
+12-05 08:49:30.366    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 20K, 5% free 93979K/98304K, paused 84ms, total 84ms
+12-05 08:49:30.454    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.833MB to 96.000MB
+12-05 08:49:30.454    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 19K, 5% free 93980K/98304K, paused 84ms, total 84ms
+12-05 08:49:30.686    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.833MB to 96.000MB
+12-05 08:49:30.686    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 17K, 5% free 93982K/98304K, paused 79ms, total 79ms
+12-05 08:49:30.778    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.835MB to 96.000MB
+12-05 08:49:30.778    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 16K, 5% free 93983K/98304K, paused 90ms, total 90ms
+12-05 08:49:30.862    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.836MB to 96.000MB
+12-05 08:49:30.862    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 14K, 5% free 93984K/98304K, paused 85ms, total 85ms
+12-05 08:49:30.946    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.837MB to 96.000MB
+12-05 08:49:30.946    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 13K, 5% free 93985K/98304K, paused 83ms, total 83ms
+12-05 08:49:31.026    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.838MB to 96.000MB
+12-05 08:49:31.026    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 12K, 5% free 93986K/98304K, paused 79ms, total 79ms
+12-05 08:49:31.106    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.839MB to 96.000MB
+12-05 08:49:31.106    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 11K, 5% free 93987K/98304K, paused 77ms, total 77ms
+12-05 08:49:31.190    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.840MB to 96.000MB
+12-05 08:49:31.190    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 10K, 5% free 93988K/98304K, paused 87ms, total 87ms
+12-05 08:49:31.282    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.840MB to 96.000MB
+12-05 08:49:31.282    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 9K, 5% free 93989K/98304K, paused 87ms, total 88ms
+12-05 08:49:31.366    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.841MB to 96.000MB
+12-05 08:49:31.366    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 8K, 5% free 93990K/98304K, paused 83ms, total 84ms
+12-05 08:49:31.446    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.842MB to 96.000MB
+12-05 08:49:31.446    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 8K, 5% free 93991K/98304K, paused 82ms, total 82ms
+12-05 08:49:31.538    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.842MB to 96.000MB
+12-05 08:49:31.538    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 7K, 5% free 93991K/98304K, paused 88ms, total 88ms
+12-05 08:49:31.630    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.843MB to 96.000MB
+12-05 08:49:31.630    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6K, 5% free 93992K/98304K, paused 91ms, total 91ms
+12-05 08:49:31.718    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.843MB to 96.000MB
+12-05 08:49:31.718    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 6K, 5% free 93992K/98304K, paused 88ms, total 88ms
+12-05 08:49:31.810    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.844MB to 96.000MB
+12-05 08:49:31.810    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5K, 5% free 93993K/98304K, paused 89ms, total 89ms
+12-05 08:49:31.890    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.844MB to 96.000MB
+12-05 08:49:31.890    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 5K, 5% free 93993K/98304K, paused 83ms, total 83ms
+12-05 08:49:31.982    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.845MB to 96.000MB
+12-05 08:49:31.982    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4K, 5% free 93993K/98304K, paused 90ms, total 90ms
+12-05 08:49:32.066    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.845MB to 96.000MB
+12-05 08:49:32.066    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4K, 5% free 93994K/98304K, paused 83ms, total 83ms
+12-05 08:49:32.142    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.846MB to 96.000MB
+12-05 08:49:32.142    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 4K, 5% free 93994K/98304K, paused 78ms, total 78ms
+12-05 08:49:32.234    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.846MB to 96.000MB
+12-05 08:49:32.234    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 3K, 5% free 93994K/98304K, paused 91ms, total 91ms
+12-05 08:49:32.322    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.846MB to 96.000MB
+12-05 08:49:32.322    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 3K, 5% free 93995K/98304K, paused 87ms, total 88ms
+12-05 08:49:32.410    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.846MB to 96.000MB
+12-05 08:49:32.410    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 3K, 5% free 93995K/98304K, paused 86ms, total 86ms
+12-05 08:49:32.490    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.847MB to 96.000MB
+12-05 08:49:32.490    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2K, 5% free 93995K/98304K, paused 81ms, total 81ms
+12-05 08:49:32.570    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.847MB to 96.000MB
+12-05 08:49:32.570    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2K, 5% free 93995K/98304K, paused 77ms, total 77ms
+12-05 08:49:32.650    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.847MB to 96.000MB
+12-05 08:49:32.650    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2K, 5% free 93996K/98304K, paused 80ms, total 80ms
+12-05 08:49:32.730    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.847MB to 96.000MB
+12-05 08:49:32.730    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2K, 5% free 93996K/98304K, paused 83ms, total 83ms
+12-05 08:49:32.814    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.847MB to 96.000MB
+12-05 08:49:32.814    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2K, 5% free 93996K/98304K, paused 83ms, total 83ms
+12-05 08:49:32.902    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.847MB to 96.000MB
+12-05 08:49:32.902    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 2K, 5% free 93996K/98304K, paused 86ms, total 86ms
+12-05 08:49:32.990    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.848MB to 96.000MB
+12-05 08:49:32.990    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1K, 5% free 93996K/98304K, paused 87ms, total 87ms
+12-05 08:49:33.090    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.848MB to 96.000MB
+12-05 08:49:33.090    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1K, 5% free 93996K/98304K, paused 100ms, total 100ms
+12-05 08:49:33.178    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.848MB to 96.000MB
+12-05 08:49:33.178    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1K, 5% free 93997K/98304K, paused 86ms, total 86ms
+12-05 08:49:33.266    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.848MB to 96.000MB
+12-05 08:49:33.266    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1K, 5% free 93997K/98304K, paused 88ms, total 88ms
+12-05 08:49:33.354    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.848MB to 96.000MB
+12-05 08:49:33.354    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1K, 5% free 93997K/98304K, paused 87ms, total 87ms
+12-05 08:49:33.438    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.848MB to 96.000MB
+12-05 08:49:33.438    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1K, 5% free 93997K/98304K, paused 83ms, total 83ms
+12-05 08:49:33.526    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.848MB to 96.000MB
+12-05 08:49:33.526    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1K, 5% free 93997K/98304K, paused 88ms, total 88ms
+12-05 08:49:33.606    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.848MB to 96.000MB
+12-05 08:49:33.606    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1K, 5% free 93997K/98304K, paused 78ms, total 78ms
+12-05 08:49:33.682    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.848MB to 96.000MB
+12-05 08:49:33.682    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 1K, 5% free 93997K/98304K, paused 74ms, total 74ms
+12-05 08:49:33.762    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.848MB to 96.000MB
+12-05 08:49:33.762    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 82ms, total 82ms
+12-05 08:49:33.846    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:33.846    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 81ms, total 81ms
+12-05 08:49:33.926    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.848MB to 96.000MB
+12-05 08:49:33.926    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 81ms, total 81ms
+12-05 08:49:34.018    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:34.018    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 91ms, total 91ms
+12-05 08:49:34.102    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:34.102    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 83ms, total 83ms
+12-05 08:49:34.190    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:34.190    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 87ms, total 87ms
+12-05 08:49:34.282    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:34.282    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 91ms, total 91ms
+12-05 08:49:34.366    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:34.366    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 83ms, total 83ms
+12-05 08:49:34.446    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:34.446    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 80ms, total 80ms
+12-05 08:49:34.530    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:34.530    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 83ms, total 84ms
+12-05 08:49:34.614    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:34.614    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 83ms, total 83ms
+12-05 08:49:34.702    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:34.702    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 86ms, total 86ms
+12-05 08:49:34.782    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:34.786    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 84ms, total 84ms
+12-05 08:49:34.870    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:34.870    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 86ms, total 86ms
+12-05 08:49:34.958    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:34.958    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 88ms, total 88ms
+12-05 08:49:35.042    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:35.042    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 82ms, total 82ms
+12-05 08:49:35.122    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:35.122    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 81ms, total 81ms
+12-05 08:49:35.206    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:35.206    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 85ms, total 85ms
+12-05 08:49:35.298    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:35.298    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 91ms, total 91ms
+12-05 08:49:35.390    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:35.390    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 94ms, total 94ms
+12-05 08:49:35.478    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:35.478    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 87ms, total 87ms
+12-05 08:49:35.570    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:35.570    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 89ms, total 90ms
+12-05 08:49:35.646    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:35.646    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 77ms, total 77ms
+12-05 08:49:35.726    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:35.726    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 78ms, total 78ms
+12-05 08:49:35.802    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:35.802    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 79ms, total 79ms
+12-05 08:49:35.882    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:35.882    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 79ms, total 79ms
+12-05 08:49:35.974    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:35.974    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 92ms, total 92ms
+12-05 08:49:36.062    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:36.062    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 86ms, total 86ms
+12-05 08:49:36.142    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:36.142    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 80ms, total 80ms
+12-05 08:49:36.222    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:36.222    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 79ms, total 79ms
+12-05 08:49:36.298    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:36.298    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 79ms, total 79ms
+12-05 08:49:36.382    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:36.382    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 84ms, total 84ms
+12-05 08:49:36.470    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:36.470    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93998K/98304K, paused 87ms, total 87ms
+12-05 08:49:36.474    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 32-byte allocation
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed <1K, 5% free 93997K/98304K, paused 156ms, total 156ms
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 32-byte allocation.
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ "main" prio=5 tid=1 RUNNABLE
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa4d6fbd8 self=0xb8d7eeb0
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1556 nice=0 sched=0/0 cgrp=apps handle=-1216470976
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 38956473651 5743040532 455417 ) utm=3688 stm=207 core=0
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Constructor.constructNative(Native Method)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.get(Realm.java:723)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults.get(RealmResults.java:99)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:433)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:412)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.refreshUI(MainActivity.java:78)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.access$000(MainActivity.java:12)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity$1.onChange(MainActivity.java:20)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.sendNotifications(Realm.java:830)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm$RealmCallback.handleMessage(Realm.java:183)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Handler.dispatchMessage(Handler.java:98)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Looper.loop(Looper.java:136)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.app.ActivityThread.main(ActivityThread.java:5001)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invokeNative(Native Method)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invoke(Method.java:515)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:785)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:601)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at dalvik.system.NativeStart.main(Native Method)
+12-05 08:49:36.630    1556-1556/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:36.710  1556: 1565 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:36.710    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 78ms, total 78ms
+12-05 08:49:36.790    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:36.790    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 81ms, total 81ms
+12-05 08:49:36.790    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 164-byte allocation
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed <1K, 5% free 93997K/98304K, paused 154ms, total 154ms
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 164-byte allocation.
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ "main" prio=5 tid=1 RUNNABLE
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa4d6fbd8 self=0xb8d7eeb0
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1556 nice=0 sched=0/0 cgrp=apps handle=-1216470976
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 39188129330 5755650661 455473 ) utm=3710 stm=208 core=0
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.nativeFillInStackTrace(Native Method)
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.fillInStackTrace(Throwable.java:166)
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.<init>(Throwable.java:85)
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Error.<init>(Error.java:37)
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.VirtualMachineError.<init>(VirtualMachineError.java:35)
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.OutOfMemoryError.<init>(OutOfMemoryError.java:33)
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Constructor.constructNative(Native Method)
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.get(Realm.java:723)
+12-05 08:49:36.942    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults.get(RealmResults.java:99)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:433)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:412)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.refreshUI(MainActivity.java:78)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.access$000(MainActivity.java:12)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity$1.onChange(MainActivity.java:20)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.sendNotifications(Realm.java:830)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm$RealmCallback.handleMessage(Realm.java:183)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Handler.dispatchMessage(Handler.java:98)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Looper.loop(Looper.java:136)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.app.ActivityThread.main(ActivityThread.java:5001)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invokeNative(Native Method)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invoke(Method.java:515)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:785)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:601)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at dalvik.system.NativeStart.main(Native Method)
+12-05 08:49:36.946    1556-1556/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:37.026  1556: 1570 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:37.026    1556-1556/io.realm.memoryleak W/dalvikvm﹕ Exception thrown (Ljava/lang/OutOfMemoryError;) while throwing internal exception (Ljava/lang/OutOfMemoryError;)
+12-05 08:49:37.026    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 83ms, total 83ms
+12-05 08:49:37.026    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 24-byte allocation
+12-05 08:49:37.170    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:37.170    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed <1K, 5% free 93997K/98304K, paused 143ms, total 143ms
+12-05 08:49:37.258    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:37.258    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 88ms, total 88ms
+12-05 08:49:37.342    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:37.342    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 85ms, total 85ms
+12-05 08:49:37.342    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 76-byte allocation
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed 0K, 5% free 93997K/98304K, paused 140ms, total 140ms
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 76-byte allocation.
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ "main" prio=5 tid=1 RUNNABLE
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa4d6fbd8 self=0xb8d7eeb0
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1556 nice=0 sched=0/0 cgrp=apps handle=-1216470976
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 39409917274 5765353402 455528 ) utm=3730 stm=210 core=0
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Constructor.newInstance(Constructor.java:~423)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.get(Realm.java:723)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults.get(RealmResults.java:99)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:433)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:412)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.refreshUI(MainActivity.java:78)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.access$000(MainActivity.java:12)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity$1.onChange(MainActivity.java:20)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.sendNotifications(Realm.java:830)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm$RealmCallback.handleMessage(Realm.java:183)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Handler.dispatchMessage(Handler.java:98)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Looper.loop(Looper.java:136)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.app.ActivityThread.main(ActivityThread.java:5001)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invokeNative(Native Method)
+12-05 08:49:37.482    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invoke(Method.java:515)
+12-05 08:49:37.486    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:785)
+12-05 08:49:37.486    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:601)
+12-05 08:49:37.486    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at dalvik.system.NativeStart.main(Native Method)
+12-05 08:49:37.486    1556-1556/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:37.566  1556: 1570 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:37.566    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 80ms, total 80ms
+12-05 08:49:37.650    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:37.650    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 85ms, total 85ms
+12-05 08:49:37.650    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 28-byte allocation
+12-05 08:49:37.798    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:37.798    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed 0K, 5% free 93997K/98304K, paused 150ms, total 150ms
+12-05 08:49:37.798    1556-1556/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 28-byte allocation.
+12-05 08:49:37.798    1556-1556/io.realm.memoryleak I/dalvikvm﹕ "main" prio=5 tid=1 RUNNABLE
+12-05 08:49:37.798    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa4d6fbd8 self=0xb8d7eeb0
+12-05 08:49:37.798    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1556 nice=0 sched=0/0 cgrp=apps handle=-1216470976
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 39642077827 5776198582 455577 ) utm=3752 stm=212 core=0
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Constructor.newInstance(Constructor.java:~423)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.get(Realm.java:723)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults.get(RealmResults.java:99)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:433)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:412)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.refreshUI(MainActivity.java:78)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.access$000(MainActivity.java:12)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity$1.onChange(MainActivity.java:20)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.sendNotifications(Realm.java:830)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm$RealmCallback.handleMessage(Realm.java:183)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Handler.dispatchMessage(Handler.java:98)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Looper.loop(Looper.java:136)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.app.ActivityThread.main(ActivityThread.java:5001)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invokeNative(Native Method)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invoke(Method.java:515)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:785)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:601)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at dalvik.system.NativeStart.main(Native Method)
+12-05 08:49:37.802    1556-1556/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:37.810  1556: 1556 W/dalvikvm ]
+    Could not resolve class ref'ed in exception catch list (class index 1589, exception Ljava/lang/OutOfMemoryError;)
+12-05 08:49:37.882    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:37.886    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 84ms, total 84ms
+12-05 08:49:37.886    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 32-byte allocation
+12-05 08:49:38.026    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:38.026    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed <1K, 5% free 93997K/98304K, paused 141ms, total 141ms
+12-05 08:49:38.118    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:38.118    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 91ms, total 91ms
+12-05 08:49:38.118    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 24-byte allocation
+12-05 08:49:38.266    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:38.266    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed <1K, 5% free 93997K/98304K, paused 147ms, total 147ms
+12-05 08:49:38.350    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:38.350    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 84ms, total 84ms
+12-05 08:49:38.430    1556-1565/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:38.430    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 82ms, total 82ms
+12-05 08:49:38.510    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:38.510    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 79ms, total 79ms
+12-05 08:49:38.510    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 76-byte allocation
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed <1K, 5% free 93997K/98304K, paused 155ms, total 155ms
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 76-byte allocation.
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ "main" prio=5 tid=1 RUNNABLE
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa4d6fbd8 self=0xb8d7eeb0
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1556 nice=0 sched=0/0 cgrp=apps handle=-1216470976
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 40108854744 5787403683 455653 ) utm=3795 stm=215 core=0
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Constructor.newInstance(Constructor.java:~423)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.get(Realm.java:723)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults.get(RealmResults.java:99)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:433)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:412)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.refreshUI(MainActivity.java:78)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.access$000(MainActivity.java:12)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity$1.onChange(MainActivity.java:20)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.sendNotifications(Realm.java:830)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm$RealmCallback.handleMessage(Realm.java:183)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Handler.dispatchMessage(Handler.java:98)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Looper.loop(Looper.java:136)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.app.ActivityThread.main(ActivityThread.java:5001)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invokeNative(Native Method)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invoke(Method.java:515)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:785)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:601)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at dalvik.system.NativeStart.main(Native Method)
+12-05 08:49:38.666    1556-1556/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:38.750  1556: 1556 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:38.750    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 80ms, total 80ms
+12-05 08:49:38.838    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:38.838    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 90ms, total 90ms
+12-05 08:49:38.842    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 20-byte allocation
+12-05 08:49:38.990    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:38.990    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed 0K, 5% free 93997K/98304K, paused 152ms, total 152ms
+12-05 08:49:38.994    1556-1570/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 20-byte allocation.
+12-05 08:49:38.994    1556-1570/io.realm.memoryleak I/dalvikvm﹕ "Thread-121" prio=5 tid=11 RUNNABLE
+12-05 08:49:38.994    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa5055e68 self=0xb8ecf810
+12-05 08:49:38.994    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1570 nice=0 sched=0/0 cgrp=apps handle=-1192418832
+12-05 08:49:38.994    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 2205977125 337355154 6801 ) utm=134 stm=86 core=0
+12-05 08:49:38.994    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.sendNotifications(Realm.java:~828)
+12-05 08:49:38.994    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.commitTransaction(Realm.java:896)
+12-05 08:49:38.994    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity$2.run(MainActivity.java:48)
+12-05 08:49:38.994    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Thread.run(Thread.java:841)
+12-05 08:49:38.994    1556-1570/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:39.078  1556: 1556 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:39.078    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 84ms, total 84ms
+12-05 08:49:39.078    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 156-byte allocation
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed 0K, 5% free 93997K/98304K, paused 152ms, total 152ms
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 156-byte allocation.
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ "main" prio=5 tid=1 RUNNABLE
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa4d6fbd8 self=0xb8d7eeb0
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1556 nice=0 sched=0/0 cgrp=apps handle=-1216470976
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 40420336035 5795232118 455710 ) utm=3825 stm=216 core=0
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.nativeFillInStackTrace(Native Method)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.fillInStackTrace(Throwable.java:166)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.<init>(Throwable.java:85)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Error.<init>(Error.java:37)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.VirtualMachineError.<init>(VirtualMachineError.java:35)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.OutOfMemoryError.<init>(OutOfMemoryError.java:33)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Constructor.newInstance(Constructor.java:-1)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.get(Realm.java:723)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults.get(RealmResults.java:99)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:433)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:412)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.refreshUI(MainActivity.java:78)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.access$000(MainActivity.java:12)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity$1.onChange(MainActivity.java:20)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.sendNotifications(Realm.java:830)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm$RealmCallback.handleMessage(Realm.java:183)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Handler.dispatchMessage(Handler.java:98)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Looper.loop(Looper.java:136)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.app.ActivityThread.main(ActivityThread.java:5001)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invokeNative(Native Method)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invoke(Method.java:515)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:785)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:601)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at dalvik.system.NativeStart.main(Native Method)
+12-05 08:49:39.230    1556-1556/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:39.322  1556: 1570 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:39.322    1556-1556/io.realm.memoryleak W/dalvikvm﹕ Exception thrown (Ljava/lang/OutOfMemoryError;) while throwing internal exception (Ljava/lang/OutOfMemoryError;)
+12-05 08:49:39.322    1556-1556/io.realm.memoryleak W/dalvikvm﹕ Could not resolve class ref'ed in exception catch list (class index 1585, exception Ljava/lang/OutOfMemoryError;)
+12-05 08:49:39.322    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 89ms, total 89ms
+12-05 08:49:39.322    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 28-byte allocation
+12-05 08:49:39.474    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:39.474    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed <1K, 5% free 93997K/98304K, paused 153ms, total 153ms
+12-05 08:49:39.558    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:39.558    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 85ms, total 85ms
+12-05 08:49:39.558    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 98-byte allocation
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed 0K, 5% free 93997K/98304K, paused 153ms, total 153ms
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 98-byte allocation.
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ "main" prio=5 tid=1 RUNNABLE
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa4d6fbd8 self=0xb8d7eeb0
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1556 nice=0 sched=0/0 cgrp=apps handle=-1216470976
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 40656093315 5806488588 455767 ) utm=3847 stm=218 core=0
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Constructor.newInstance(Constructor.java:~423)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.get(Realm.java:723)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults.get(RealmResults.java:99)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:433)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:412)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.refreshUI(MainActivity.java:78)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.access$000(MainActivity.java:12)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity$1.onChange(MainActivity.java:20)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.sendNotifications(Realm.java:830)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm$RealmCallback.handleMessage(Realm.java:183)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Handler.dispatchMessage(Handler.java:98)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Looper.loop(Looper.java:136)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.app.ActivityThread.main(ActivityThread.java:5001)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invokeNative(Native Method)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invoke(Method.java:515)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:785)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:601)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at dalvik.system.NativeStart.main(Native Method)
+12-05 08:49:39.714    1556-1556/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:39.802  1556: 1570 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:39.802    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 87ms, total 87ms
+12-05 08:49:39.802    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 44-byte allocation
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed 0K, 5% free 93997K/98304K, paused 157ms, total 157ms
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 44-byte allocation.
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ "Thread-121" prio=5 tid=11 RUNNABLE
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa5055e68 self=0xb8ecf810
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1570 nice=0 sched=0/0 cgrp=apps handle=-1192418832
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 2685118285 348870408 6855 ) utm=180 stm=88 core=0
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.nativeFillInStackTrace(Native Method)
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.fillInStackTrace(Throwable.java:166)
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.<init>(Throwable.java:85)
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Error.<init>(Error.java:37)
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.VirtualMachineError.<init>(VirtualMachineError.java:35)
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.OutOfMemoryError.<init>(OutOfMemoryError.java:33)
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.sendNotifications(Realm.java:-1)
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.commitTransaction(Realm.java:896)
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity$2.run(MainActivity.java:48)
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Thread.run(Thread.java:841)
+12-05 08:49:39.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:40.042  1556: 1556 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:40.042    1556-1570/io.realm.memoryleak W/dalvikvm﹕ Exception thrown (Ljava/lang/OutOfMemoryError;) while throwing internal exception (Ljava/lang/OutOfMemoryError;)
+12-05 08:49:40.042    1556-1570/io.realm.memoryleak W/dalvikvm﹕ threadid=11: thread exiting with uncaught exception (group=0xa4d6eb20)
+12-05 08:49:40.042    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 82ms, total 82ms
+12-05 08:49:40.042    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 28-byte allocation
+12-05 08:49:40.202    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:40.202    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed <1K, 5% free 93997K/98304K, paused 160ms, total 160ms
+12-05 08:49:40.294    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:40.294    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 92ms, total 92ms
+12-05 08:49:40.294    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 46-byte allocation
+12-05 08:49:40.450    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:40.450    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed 0K, 5% free 93997K/98304K, paused 157ms, total 157ms
+12-05 08:49:40.450    1556-1570/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 46-byte allocation.
+12-05 08:49:40.450    1556-1570/io.realm.memoryleak I/dalvikvm﹕ "Thread-121" prio=5 tid=11 RUNNABLE
+12-05 08:49:40.450    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa5055e68 self=0xb8ecf810
+12-05 08:49:40.450    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1570 nice=0 sched=0/0 cgrp=apps handle=-1192418832
+12-05 08:49:40.450    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 2930047681 361241661 6898 ) utm=202 stm=90 core=0
+12-05 08:49:40.450    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.RuntimeInit$UncaughtHandler.uncaughtException(RuntimeInit.java:~74)
+12-05 08:49:40.450    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:693)
+12-05 08:49:40.450    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:690)
+12-05 08:49:40.450    1556-1570/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:40.534  1556: 1565 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:40.534    1556-1565/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 84ms, total 84ms
+12-05 08:49:40.618    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:40.618    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 82ms, total 82ms
+12-05 08:49:40.618    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 156-byte allocation
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed 0K, 5% free 93997K/98304K, paused 150ms, total 150ms
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 156-byte allocation.
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak I/dalvikvm﹕ "main" prio=5 tid=1 RUNNABLE
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa4d6fbd8 self=0xb8d7eeb0
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1556 nice=0 sched=0/0 cgrp=apps handle=-1216470976
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 41124062489 5817981067 455845 ) utm=3892 stm=220 core=0
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.nativeFillInStackTrace(Native Method)
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.fillInStackTrace(Throwable.java:166)
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.<init>(Throwable.java:85)
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Error.<init>(Error.java:37)
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.VirtualMachineError.<init>(VirtualMachineError.java:35)
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.OutOfMemoryError.<init>(OutOfMemoryError.java:33)
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Constructor.newInstance(Constructor.java:-1)
+12-05 08:49:40.766    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.get(Realm.java:723)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults.get(RealmResults.java:99)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:433)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.RealmResults$RealmResultsIterator.next(RealmResults.java:412)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.refreshUI(MainActivity.java:78)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity.access$000(MainActivity.java:12)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.memoryleak.MainActivity$1.onChange(MainActivity.java:20)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm.sendNotifications(Realm.java:830)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at io.realm.Realm$RealmCallback.handleMessage(Realm.java:183)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Handler.dispatchMessage(Handler.java:98)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.os.Looper.loop(Looper.java:136)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at android.app.ActivityThread.main(ActivityThread.java:5001)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invokeNative(Native Method)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invoke(Method.java:515)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:785)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:601)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at dalvik.system.NativeStart.main(Native Method)
+12-05 08:49:40.770    1556-1556/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:40.850  1556: 1570 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:40.850    1556-1556/io.realm.memoryleak W/dalvikvm﹕ Exception thrown (Ljava/lang/OutOfMemoryError;) while throwing internal exception (Ljava/lang/OutOfMemoryError;)
+12-05 08:49:40.850    1556-1556/io.realm.memoryleak W/dalvikvm﹕ Could not resolve class ref'ed in exception catch list (class index 1627, exception Ljava/lang/OutOfMemoryError;)
+12-05 08:49:40.850    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 82ms, total 82ms
+12-05 08:49:40.850    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 36-byte allocation
+12-05 08:49:41.002    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:41.002    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed <1K, 5% free 93997K/98304K, paused 150ms, total 150ms
+12-05 08:49:41.082    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:41.082    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 83ms, total 83ms
+12-05 08:49:41.082    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 184-byte allocation
+12-05 08:49:41.226    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:41.226    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed <1K, 5% free 93997K/98304K, paused 142ms, total 142ms
+12-05 08:49:41.226    1556-1556/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 184-byte allocation.
+12-05 08:49:41.226    1556-1556/io.realm.memoryleak I/dalvikvm﹕ "main" prio=5 tid=1 RUNNABLE
+12-05 08:49:41.226    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa4d6fbd8 self=0xb8d7eeb0
+12-05 08:49:41.226    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1556 nice=0 sched=0/0 cgrp=apps handle=-1216470976
+12-05 08:49:41.226    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 41345886803 5828862945 455904 ) utm=3912 stm=222 core=0
+12-05 08:49:41.226    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invokeNative(Native Method)
+12-05 08:49:41.226    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invoke(Method.java:515)
+12-05 08:49:41.226    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:785)
+12-05 08:49:41.226    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:601)
+12-05 08:49:41.226    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at dalvik.system.NativeStart.main(Native Method)
+12-05 08:49:41.226    1556-1556/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:41.314  1556: 1570 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:41.314    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 89ms, total 89ms
+12-05 08:49:41.314    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 64-byte allocation
+12-05 08:49:41.470    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:41.470    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed 0K, 5% free 93997K/98304K, paused 156ms, total 156ms
+12-05 08:49:41.474    1556-1570/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 64-byte allocation.
+12-05 08:49:41.474    1556-1570/io.realm.memoryleak I/dalvikvm﹕ "Thread-121" prio=5 tid=11 RUNNABLE
+12-05 08:49:41.474    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa5055e68 self=0xb8ecf810
+12-05 08:49:41.474    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1570 nice=0 sched=0/0 cgrp=apps handle=-1192418832
+12-05 08:49:41.474    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 3400985504 373760009 6952 ) utm=246 stm=94 core=0
+12-05 08:49:41.474    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.AbstractStringBuilder.enlargeBuffer(AbstractStringBuilder.java:~94)
+12-05 08:49:41.474    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.AbstractStringBuilder.append0(AbstractStringBuilder.java:145)
+12-05 08:49:41.474    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.StringBuilder.append(StringBuilder.java:216)
+12-05 08:49:41.474    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at android.util.Slog.e(Slog.java:77)
+12-05 08:49:41.474    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.RuntimeInit$UncaughtHandler.uncaughtException(RuntimeInit.java:88)
+12-05 08:49:41.474    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:693)
+12-05 08:49:41.474    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:690)
+12-05 08:49:41.474    1556-1570/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:41.562  1556: 1556 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:41.566    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed <1K, 5% free 93997K/98304K, paused 91ms, total 91ms
+12-05 08:49:41.566    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 52-byte allocation
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed 0K, 5% free 93997K/98304K, paused 154ms, total 154ms
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 52-byte allocation.
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ "main" prio=5 tid=1 RUNNABLE
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa4d6fbd8 self=0xb8d7eeb0
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1556 nice=0 sched=0/0 cgrp=apps handle=-1216470976
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 41587133471 5837312118 455937 ) utm=3932 stm=225 core=0
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.nativeFillInStackTrace(Native Method)
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.fillInStackTrace(Throwable.java:166)
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.<init>(Throwable.java:85)
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Error.<init>(Error.java:37)
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.VirtualMachineError.<init>(VirtualMachineError.java:35)
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.OutOfMemoryError.<init>(OutOfMemoryError.java:33)
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invokeNative(Native Method)
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at java.lang.reflect.Method.invoke(Method.java:515)
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:785)
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:601)
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ at dalvik.system.NativeStart.main(Native Method)
+12-05 08:49:41.718    1556-1556/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:41.806  1556: 1570 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:41.806    1556-1556/io.realm.memoryleak W/dalvikvm﹕ Exception thrown (Ljava/lang/OutOfMemoryError;) while throwing internal exception (Ljava/lang/OutOfMemoryError;)
+12-05 08:49:41.806    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_FOR_ALLOC freed 0K, 5% free 93997K/98304K, paused 88ms, total 88ms
+12-05 08:49:41.806    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Forcing collection of SoftReferences for 68-byte allocation
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm-heap﹕ Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak D/dalvikvm﹕ GC_BEFORE_OOM freed <1K, 5% free 93997K/98304K, paused 152ms, total 152ms
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak E/dalvikvm-heap﹕ Out of memory on a 68-byte allocation.
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ "Thread-121" prio=5 tid=11 RUNNABLE
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | group="main" sCount=0 dsCount=0 obj=0xa5055e68 self=0xb8ecf810
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | sysTid=1570 nice=0 sched=0/0 cgrp=apps handle=-1192418832
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ | state=R schedstat=( 3638469371 383105523 6994 ) utm=268 stm=95 core=0
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.nativeFillInStackTrace(Native Method)
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.fillInStackTrace(Throwable.java:166)
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Throwable.<init>(Throwable.java:85)
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.Error.<init>(Error.java:37)
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.VirtualMachineError.<init>(VirtualMachineError.java:35)
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.OutOfMemoryError.<init>(OutOfMemoryError.java:33)
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.AbstractStringBuilder.enlargeBuffer(AbstractStringBuilder.java:-1)
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.AbstractStringBuilder.append0(AbstractStringBuilder.java:145)
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.StringBuilder.append(StringBuilder.java:216)
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at android.util.Slog.e(Slog.java:77)
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at com.android.internal.os.RuntimeInit$UncaughtHandler.uncaughtException(RuntimeInit.java:88)
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:693)
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:690)
+12-05 08:49:41.958    1556-1570/io.realm.memoryleak I/dalvikvm﹕ [ 12-05 08:49:42.042  1556: 1556 I/dalvikvm-heap ]
+    Clamp target GC heap from 99.849MB to 96.000MB
+12-05 08:49:42.042    1556-1570/io.realm.memoryleak W/dalvikvm﹕ Exception thrown (Ljava/lang/OutOfMemoryError;) while throwing internal exception (Ljava/lang/OutOfMemoryError;)
+12-05 08:49:42.042    1556-1570/io.realm.memoryleak I/Process﹕ Sending signal. PID: 1556 SIG: 9
