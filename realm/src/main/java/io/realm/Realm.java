@@ -551,7 +551,7 @@ public final class Realm implements Closeable {
                     } catch (IllegalAccessException e) {
                         throw new RealmException("Could not execute the validateTable method in the " + generatedClassName + " class: " + APT_NOT_EXECUTED_MESSAGE);
                     } catch (InvocationTargetException e) {
-                        throw new RealmMigrationNeededException(e.getMessage(), e);
+                        throw new RealmMigrationNeededException(e.getMessage(), e, absolutePath);
                     }
 
                     // Populate the columnIndices table
@@ -574,7 +574,7 @@ public final class Realm implements Closeable {
                     for (String fieldName : fieldNames) {
                         long columnIndex = table.getColumnIndex(fieldName);
                         if (columnIndex == -1) {
-                            throw new RealmMigrationNeededException("Field '" + fieldName + "' not found for type '" + modelClassName + "'");
+                            throw new RealmMigrationNeededException("Field '" + fieldName + "' not found for type '" + modelClassName + "'", absolutePath);
                         }
                         Map<String, Long> innerMap = columnIndices.get(modelClassName);
                         if (innerMap == null) {
