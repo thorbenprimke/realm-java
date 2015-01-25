@@ -2,8 +2,10 @@ package io.realm.entities;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.annotations.RealmClass;
 
-public class CyclicType extends RealmObject {
+@RealmClass
+public class CyclicType {
 
     private String name;
     private CyclicType object;

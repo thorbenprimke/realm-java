@@ -99,7 +99,7 @@ public class RealmJsonTypeHelper {
         writer
             .beginControlFlow("if (json.has(\"%s\"))", fieldName)
                 .emitStatement("%s obj = realm.createObject(%s.class)", qualifiedFieldType, qualifiedFieldType)
-                .emitStatement("((RealmObject) obj).populateUsingJsonObject(json.getJSONObject(\"%s\"))", fieldName)
+                .emitStatement("((RealmProxy) obj).populateUsingJsonObject(json.getJSONObject(\"%s\"))", fieldName)
                 .emitStatement("%s(obj)", setter)
             .endControlFlow();
     }
@@ -110,7 +110,7 @@ public class RealmJsonTypeHelper {
                 .emitStatement("JSONArray array = json.getJSONArray(\"%s\")", fieldName)
                 .beginControlFlow("for (int i = 0; i < array.length(); i++)")
                     .emitStatement("%s obj = realm.createObject(%s.class)", fieldTypeCanonicalName, fieldTypeCanonicalName)
-                    .emitStatement("((RealmObject) obj).populateUsingJsonObject(array.getJSONObject(i))")
+                    .emitStatement("((RealmProxy) obj).populateUsingJsonObject(array.getJSONObject(i))")
                     .emitStatement("%s().add(obj)", getter)
                 .endControlFlow()
             .endControlFlow();
@@ -126,7 +126,7 @@ public class RealmJsonTypeHelper {
     public static void emitFillRealmObjectFromStream(String setter, String fieldName, String fieldTypeCanonicalName, JavaWriter writer) throws IOException {
         writer
             .emitStatement("%s obj = realm.createObject(%s.class)", fieldTypeCanonicalName, fieldTypeCanonicalName)
-            .emitStatement("((RealmObject) obj).populateUsingJsonStream(reader)", fieldName)
+            .emitStatement("((RealmProxy) obj).populateUsingJsonStream(reader)", fieldName)
             .emitStatement("%s(obj)", setter);
     }
 
@@ -135,7 +135,7 @@ public class RealmJsonTypeHelper {
             .emitStatement("reader.beginArray()")
             .beginControlFlow("while (reader.hasNext())")
                 .emitStatement("%s obj = realm.createObject(%s.class)", fieldTypeCanonicalName, fieldTypeCanonicalName)
-                .emitStatement("((RealmObject) obj).populateUsingJsonStream(reader)")
+                .emitStatement("((RealmProxy) obj).populateUsingJsonStream(reader)")
                 .emitStatement("%s().add(obj)", getter)
             .endControlFlow()
             .emitStatement("reader.endArray()");

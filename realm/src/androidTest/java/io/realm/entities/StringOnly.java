@@ -17,8 +17,10 @@
 package io.realm.entities;
 
 import io.realm.RealmObject;
+import io.realm.annotations.RealmClass;
 
-public class StringOnly extends RealmObject {
+@RealmClass
+public class StringOnly {
 
     private String chars;
 

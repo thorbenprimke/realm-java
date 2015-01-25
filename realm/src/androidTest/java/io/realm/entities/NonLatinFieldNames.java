@@ -17,8 +17,10 @@
 package io.realm.entities;
 
 import io.realm.RealmObject;
+import io.realm.annotations.RealmClass;
 
-public class NonLatinFieldNames extends RealmObject{
+@RealmClass
+public class NonLatinFieldNames {
     private long 델타;
     private long Δέλτα;
 

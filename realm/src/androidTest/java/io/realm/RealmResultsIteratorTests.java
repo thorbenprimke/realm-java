@@ -147,7 +147,7 @@ public class RealmResultsIteratorTests extends AndroidTestCase {
         testRealm.beginTransaction();
         try {
             for (AllTypes obj : result) {
-                obj.removeFromRealm();
+                testRealm.removeFromRealm(obj);
             }
         } catch (ConcurrentModificationException ignored) {
             return;

@@ -55,6 +55,12 @@ public class RealmProcessor extends AbstractProcessor {
         RealmVersionChecker updateChecker = new RealmVersionChecker(processingEnv);
         updateChecker.executeRealmVersionUpdate();
 
+        Set<String> realmClasses = new HashSet<String>();
+        for (Element element : roundEnv.getElementsAnnotatedWith(RealmClass.class)) {
+            realmClasses.add(element.asType().toString());
+        };
+
+
         for (Element classElement : roundEnv.getElementsAnnotatedWith(RealmClass.class)) {
             String className;
             String packageName;
@@ -90,10 +96,10 @@ public class RealmProcessor extends AbstractProcessor {
             }
 
             TypeElement parentElement = (TypeElement) processingEnv.getTypeUtils().asElement(typeElement.getSuperclass());
-            if (!parentElement.toString().endsWith(".RealmObject")) {
-                error("A RealmClass annotated object must be derived from RealmObject", classElement);
-            }
-
+//            if (!parentElement.toString().endsWith(".RealmObject")) {
+//                error("A RealmClass annotated object must be derived from RealmObject", classElement);
+//            }
+//
             PackageElement packageElement = (PackageElement) enclosingElement;
             packageName = packageElement.getQualifiedName().toString();
 
@@ -128,6 +134,13 @@ public class RealmProcessor extends AbstractProcessor {
                     fields.add(variableElement);
                     expectedGetters.add(fieldName);
                     expectedSetters.add(fieldName);
+
+                    note(element.asType().toString());
+                    if (realmClasses.contains(element.asType().toString())) {
+                        note("Bingo!");
+                    }
+
+
                 } else if (elementKind.equals(ElementKind.CONSTRUCTOR)) {
                     hasDefaultConstructor = hasDefaultConstructor || isDefaultConstructor(element);
 
@@ -254,7 +267,7 @@ public class RealmProcessor extends AbstractProcessor {
             }
 
             RealmProxyClassGenerator sourceCodeGenerator =
-                    new RealmProxyClassGenerator(processingEnv, className, packageName, fields, getters, setters, indexedFields);
+                    new RealmProxyClassGenerator(processingEnv, className, packageName, fields, getters, setters, indexedFields, realmClasses);
             try {
                 sourceCodeGenerator.generate();
             } catch (IOException e) {

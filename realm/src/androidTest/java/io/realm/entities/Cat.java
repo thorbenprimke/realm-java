@@ -19,8 +19,10 @@ package io.realm.entities;
 import java.util.Date;
 
 import io.realm.RealmObject;
+import io.realm.annotations.RealmClass;
 
-public class Cat extends RealmObject {
+@RealmClass
+public class Cat {
     private String name;
     private long age;
     private float height;

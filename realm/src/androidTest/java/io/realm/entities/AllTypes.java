@@ -20,8 +20,10 @@ import java.util.Date;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.annotations.RealmClass;
 
-public class AllTypes extends RealmObject {
+@RealmClass
+public class AllTypes {
     private String columnString;
     private long columnLong;
     private float columnFloat;

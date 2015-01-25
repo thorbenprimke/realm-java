@@ -43,7 +43,7 @@ import io.realm.internal.TableView;
  * @see RealmQuery#findAll()
  * @see Realm#allObjects(Class)
  */
-public class RealmResults<E extends RealmObject> extends AbstractList<E> {
+public class RealmResults<E> extends AbstractList<E> {
 
     private Class<E> classSpec;
     private Realm realm;

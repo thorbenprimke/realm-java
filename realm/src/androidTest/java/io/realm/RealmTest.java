@@ -17,6 +17,7 @@ package io.realm;
 
 import android.content.Context;
 import android.test.AndroidTestCase;
+import android.util.Log;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -25,7 +26,9 @@ import java.io.IOException;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -36,6 +39,10 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 import io.realm.entities.AllTypes;
+import io.realm.entities.AnnotationNameConventions;
+import io.realm.entities.AnnotationTypes;
+import io.realm.entities.Cat;
+import io.realm.entities.CyclicType;
 import io.realm.entities.Dog;
 import io.realm.entities.NonLatinFieldNames;
 import io.realm.entities.Owner;
@@ -106,6 +113,74 @@ public class RealmTest extends AndroidTestCase {
 
     private void populateTestRealm() {
         populateTestRealm(TEST_DATA_SIZE);
+    }
+
+
+    public void testInsertDeleteSpeed() {
+
+        HashSet<Class> realmClasses = new HashSet<Class>();
+        realmClasses.add(AllTypes.class);
+        realmClasses.add(AnnotationNameConventions.class);
+        realmClasses.add(AnnotationTypes.class);
+        realmClasses.add(Cat.class);
+        realmClasses.add(CyclicType.class);
+        realmClasses.add(Dog.class);
+        realmClasses.add(NonLatinFieldNames.class);
+        realmClasses.add(Owner.class);
+        realmClasses.add(StringOnly.class);
+        realmClasses.add(Thread.class);
+        Realm.realmClasses = Collections.unmodifiableSet(realmClasses);
+
+        // Warm up
+        for (int i = 0; i < 10; i++) {
+            doTest();
+        }
+
+        // Test
+        double[] results = new double[100];
+        for (int i = 0; i < 100; i++) {
+            results[i] = doTest()/100000d;
+        }
+
+        report(results);
+    }
+
+    private void report(double[] results) {
+        double min = Double.MAX_VALUE;
+        double max = Double.MIN_VALUE;
+        double avg = 0;
+        long sum = 0;
+        for (double result : results) {
+            min = Math.min(min, result);
+            max = Math.max(max, result);
+            sum += result;
+        }
+        avg = sum/results.length;
+        Log.e("TEST-RESULT", String.format("Min: %s, Max: %s, Avg: %s", min, max, avg));
+    }
+
+    private long doTest() {
+        int TEST_OBJECTS = 1000;
+        long start = System.nanoTime();
+        testRealm.beginTransaction();
+        for (int i = 0; i < TEST_OBJECTS; ++i) {
+            AllTypes allTypes = testRealm.createObject(AllTypes.class);
+            allTypes.setColumnBoolean((i % 3) == 0);
+            allTypes.setColumnBinary(new byte[]{1, 2, 3});
+            allTypes.setColumnDate(new Date());
+            allTypes.setColumnDouble(3.1415);
+            allTypes.setColumnFloat(1.234567f + i);
+            allTypes.setColumnString("test data " + i);
+            allTypes.setColumnLong(i);
+        }
+
+        RealmResults<AllTypes> objects = testRealm.allObjects(AllTypes.class);
+        for (int i = TEST_OBJECTS - 1; i >= 0; i--) {
+            testRealm.removeFromRealm(objects.get(i));
+        }
+        testRealm.commitTransaction();
+        long end = System.nanoTime();
+        return end - start;
     }
 
 

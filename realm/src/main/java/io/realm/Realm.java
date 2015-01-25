@@ -40,8 +40,10 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -50,6 +52,7 @@ import io.realm.exceptions.RealmIOException;
 import io.realm.exceptions.RealmMigrationNeededException;
 import io.realm.internal.ColumnType;
 import io.realm.internal.ImplicitTransaction;
+import io.realm.internal.RealmProxy;
 import io.realm.internal.Row;
 import io.realm.internal.SharedGroup;
 import io.realm.internal.Table;
@@ -137,9 +140,7 @@ public final class Realm implements Closeable {
     // Package protected to be reachable by proxy classes
     static final Map<String, Map<String, Long>> columnIndices = new HashMap<String, Map<String, Long>>();
 
-    static {
-        RealmLog.add(BuildConfig.DEBUG ? new DebugAndroidLogger() : new ReleaseAndroidLogger());
-    }
+    static Set<Class> realmClasses;
 
     protected void checkIfValid() {
         // Check if the Realm instance has been closed
@@ -208,6 +209,29 @@ public final class Realm implements Closeable {
         handler.removeCallbacksAndMessages(null);
         handlers.remove(handler);
     }
+
+    // TODO
+    public void removeFromRealm(Object obj) {
+        if (obj == null) {
+            throw new NullPointerException();
+        }
+        RealmProxy proxy = RealmUtil.getProxy(obj);
+        Row row = proxy.getRow();
+        if (row == null) {
+            throw new IllegalStateException("Object malformed: missing object in Realm. Make sure to instantiate RealmObjects with Realm.createObject()");
+        }
+        if (proxy.getRealm() == null) {
+            throw new IllegalStateException("Object malformed: missing Realm. Make sure to instantiate RealmObjects with Realm.createObject()");
+        }
+        row.getTable().moveLastOver(row.getIndex());
+    }
+
+    public boolean isValid(Object obj) {
+        RealmProxy proxy = RealmUtil.getProxy(obj);
+        return proxy.getRow() != null && proxy.getRow().isAttached();
+    }
+
+
 
     private class RealmCallback implements Handler.Callback {
         @Override
@@ -580,11 +604,11 @@ public final class Realm implements Closeable {
      *
      * @throws RealmException if mapping from JSON fails.
      */
-    public <E extends RealmObject> void createAllFromJson(Class<E> clazz, JSONArray json) {
+    public <E> void createAllFromJson(Class<E> clazz, JSONArray json) {
         if (clazz == null || json == null) return;
 
         for (int i = 0; i < json.length(); i++) {
-            E obj = createObject(clazz);
+            RealmProxy obj = (RealmProxy) createObject(clazz);
             try {
                 obj.populateUsingJsonObject(json.getJSONObject(i));
             } catch (Exception e) {
@@ -603,7 +627,7 @@ public final class Realm implements Closeable {
      *
      * @throws RealmException if mapping from JSON fails.
      */
-    public <E extends RealmObject> void createAllFromJson(Class<E> clazz, String json) {
+    public <E> void createAllFromJson(Class<E> clazz, String json) {
         if (clazz == null || json == null || json.length() == 0) return;
 
         JSONArray arr;
@@ -629,14 +653,14 @@ public final class Realm implements Closeable {
      * @throws IOException if something was wrong with the input stream.
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public <E extends RealmObject> void createAllFromJson(Class<E> clazz, InputStream inputStream) throws IOException {
+    public <E> void createAllFromJson(Class<E> clazz, InputStream inputStream) throws IOException {
         if (clazz == null || inputStream == null) return;
 
         JsonReader reader = new JsonReader(new InputStreamReader(inputStream, "UTF-8"));
         try {
             reader.beginArray();
             while (reader.hasNext()) {
-                E obj = createObject(clazz);
+                RealmProxy obj = (RealmProxy) createObject(clazz);
                 obj.populateUsingJsonStream(reader);
             }
             reader.endArray();
@@ -656,17 +680,17 @@ public final class Realm implements Closeable {
      *
      * @throws RealmException if the mapping from JSON fails.
      */
-    public <E extends RealmObject> E createObjectFromJson(Class<E> clazz, JSONObject json) {
+    public <E> E createObjectFromJson(Class<E> clazz, JSONObject json) {
         if (clazz == null || json == null) return null;
 
-        E obj = createObject(clazz);
+        RealmProxy obj = (RealmProxy) createObject(clazz);
         try {
             obj.populateUsingJsonObject(json);
         } catch (Exception e) {
             throw new RealmException("Could not map Json", e);
         }
 
-        return obj;
+        return (E) obj;
     }
 
     /**
@@ -680,7 +704,7 @@ public final class Realm implements Closeable {
      *
      * @throws RealmException if mapping to json failed.
      */
-    public <E extends RealmObject> E createObjectFromJson(Class<E> clazz, String json) {
+    public <E> E createObjectFromJson(Class<E> clazz, String json) {
         if (clazz == null || json == null || json.length() == 0) return null;
 
         JSONObject obj;
@@ -706,14 +730,14 @@ public final class Realm implements Closeable {
      * @throws IOException if something was wrong with the input stream.
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public <E extends RealmObject> E createObjectFromJson(Class<E> clazz, InputStream inputStream) throws IOException {
+    public <E> E createObjectFromJson(Class<E> clazz, InputStream inputStream) throws IOException {
         if (inputStream == null || clazz == null) return null;
 
         JsonReader reader = new JsonReader(new InputStreamReader(inputStream, "UTF-8"));
         try {
-            E obj = createObject(clazz);
+            RealmProxy obj = (RealmProxy) createObject(clazz);
             obj.populateUsingJsonStream(reader);
-            return obj;
+            return (E) obj;
         } finally {
             reader.close();
         }
@@ -761,7 +785,8 @@ public final class Realm implements Closeable {
      * @return The new object
      * @throws RealmException An object could not be created
      */
-    public <E extends RealmObject> E createObject(Class<E> clazz) {
+    public <E> E createObject(Class<E> clazz) {
+        assertValidRealmClass(clazz);
         Table table;
         table = tables.get(clazz);
         if (table == null) {
@@ -792,6 +817,12 @@ public final class Realm implements Closeable {
         return get(clazz, rowIndex);
     }
 
+    private <E> void assertValidRealmClass(Class<E> clazz) {
+        if (!realmClasses.contains(clazz)) {
+            throw new IllegalArgumentException("Class is not annoted with @RealmClass");
+        };
+    }
+
     private Class<?> getProxyClass(Class<?> clazz) {
 
         String simpleClassName = simpleClassNames.get(clazz);
@@ -819,8 +850,8 @@ public final class Realm implements Closeable {
     }
 
     @SuppressWarnings("unchecked")
-    <E extends RealmObject> E get(Class<E> clazz, long rowIndex) {
-        E result;
+    <E> E get(Class<E> clazz, long rowIndex) {
+        RealmProxy result;
 
         Table table = tables.get(clazz);
         if (table == null) {
@@ -870,7 +901,7 @@ public final class Realm implements Closeable {
 
         try {
             // We are know the casted type since we generated the class
-            result = (E) constructor.newInstance();
+            result = (RealmProxy) constructor.newInstance();
         } catch (InstantiationException e) {
             throw new RealmException("Could not instantiate the proxy class");
         } catch (IllegalAccessException e) {
@@ -879,9 +910,12 @@ public final class Realm implements Closeable {
             e.printStackTrace();
             throw new RealmException("An exception occurred while instantiating the proxy class");
         }
-        result.row = row;
-        result.realm = this;
-        return result;
+
+        result.setRow(row);
+        result.setRealm(this);
+
+        // We are know the casted type since we generated the class
+        return (E) result;
     }
 
     /**
@@ -894,19 +928,24 @@ public final class Realm implements Closeable {
      * @throws io.realm.exceptions.RealmException if the RealmObject has already been added to the Realm.
      * @throws java.lang.IllegalArgumentException if RealmObject is {@code null}.
      */
-    public <E extends RealmObject> E copyToRealm(E object) {
+    public <E> E copyToRealm(E object) {
         if (object == null) {
             throw new IllegalArgumentException("Null objects cannot be copied into Realm.");
         }
 
         // Object is already in this Realm
-        if (object.realm != null && object.realm.id == this.id) {
+        Realm objRealm = null;
+        if (object instanceof RealmProxy) {
+            objRealm = ((RealmProxy) object).getRealm();
+        }
+
+        if (objRealm != null && objRealm.id == this.id) {
             return object;
         }
 
         Class<?> generatedClass;
         Class<?> objectClass;
-        if (object.realm != null) {
+        if (objRealm != null) {
             // This is already a proxy object from another Realm, get superclass instead (invariant as we don't support subclasses)
             generatedClass = object.getClass();
             objectClass = object.getClass().getSuperclass();
@@ -946,7 +985,7 @@ public final class Realm implements Closeable {
      * @throws io.realm.exceptions.RealmException if any of the objects has already been added to Realm.
      * @throws java.lang.IllegalArgumentException if any of the elements in the input collection is {@code null}.
      */
-    public <E extends RealmObject> List<E> copyToRealm(Iterable<E> objects) {
+    public <E> List<E> copyToRealm(Iterable<E> objects) {
         if (objects == null) new ArrayList<E>();
 
         ArrayList<E> realmObjects = new ArrayList<E>();
@@ -979,7 +1018,7 @@ public final class Realm implements Closeable {
      * @throws java.lang.RuntimeException Any other error
      * @see io.realm.RealmQuery
      */
-    public <E extends RealmObject> RealmQuery<E> where(Class<E> clazz) {
+    public <E> RealmQuery<E> where(Class<E> clazz) {
         checkIfValid();
         return new RealmQuery<E>(this, clazz);
     }
@@ -992,7 +1031,7 @@ public final class Realm implements Closeable {
      * @throws java.lang.RuntimeException Any other error
      * @see io.realm.RealmResults
      */
-    public <E extends RealmObject> RealmResults<E> allObjects(Class<E> clazz) {
+    public <E> RealmResults<E> allObjects(Class<E> clazz) {
         return where(clazz).findAll();
     }
 
@@ -1006,7 +1045,7 @@ public final class Realm implements Closeable {
      * @throws java.lang.IllegalArgumentException if field name does not exist.
      */
     @Deprecated
-    public <E extends RealmObject> RealmResults<E> allObjects(Class<E> clazz, String fieldName, boolean sortAscending) {
+    public <E> RealmResults<E> allObjects(Class<E> clazz, String fieldName, boolean sortAscending) {
         checkIfValid();
         Table table = getTable(clazz);
         TableView.Order order = sortAscending ? TableView.Order.ascending : TableView.Order.descending;
@@ -1028,7 +1067,7 @@ public final class Realm implements Closeable {
      * @return A sorted RealmResults containing the objects.
      * @throws java.lang.IllegalArgumentException if field name does not exist.
      */
-    public <E extends RealmObject> RealmResults<E> allObjectsSorted(Class<E> clazz, String fieldName,
+    public <E> RealmResults<E> allObjectsSorted(Class<E> clazz, String fieldName,
                                                                boolean sortAscending) {
         checkIfValid();
         Table table = getTable(clazz);
@@ -1054,7 +1093,7 @@ public final class Realm implements Closeable {
      * @throws java.lang.IllegalArgumentException if a field name does not exist.
      */
     @Deprecated
-    public <E extends RealmObject> RealmResults<E> allObjects(Class<E> clazz, String fieldName1, boolean sortAscending1,
+    public <E> RealmResults<E> allObjects(Class<E> clazz, String fieldName1, boolean sortAscending1,
                                                               String fieldName2, boolean sortAscending2) {
         return allObjects(clazz, new String[] {fieldName1, fieldName2}, new boolean[] {sortAscending1, sortAscending2});
     }
@@ -1070,7 +1109,7 @@ public final class Realm implements Closeable {
      * @return A sorted RealmResults containing the objects.
      * @throws java.lang.IllegalArgumentException if a field name does not exist.
      */
-    public <E extends RealmObject> RealmResults<E> allObjectsSorted(Class<E> clazz, String fieldName1,
+    public <E> RealmResults<E> allObjectsSorted(Class<E> clazz, String fieldName1,
                                                                boolean sortAscending1, String fieldName2,
                                                                boolean sortAscending2) {
         return allObjects(clazz, new String[] {fieldName1, fieldName2}, new boolean[] {sortAscending1, sortAscending2});
@@ -1090,7 +1129,7 @@ public final class Realm implements Closeable {
      * @throws java.lang.IllegalArgumentException if a field name does not exist.
      */
     @Deprecated
-    public <E extends RealmObject> RealmResults<E> allObjects(Class<E> clazz, String fieldName1, boolean sortAscending1,
+    public <E> RealmResults<E> allObjects(Class<E> clazz, String fieldName1, boolean sortAscending1,
                                                               String fieldName2, boolean sortAscending2,
                                                               String fieldName3, boolean sortAscending3) {
         return allObjects(clazz, new String[] {fieldName1, fieldName2, fieldName3}, new boolean[] {sortAscending1, sortAscending2, sortAscending3});
@@ -1109,7 +1148,7 @@ public final class Realm implements Closeable {
      * @return A sorted RealmResults containing the objects.
      * @throws java.lang.IllegalArgumentException if a field name does not exist.
      */
-    public <E extends RealmObject> RealmResults<E> allObjectsSorted(Class<E> clazz, String fieldName1,
+    public <E> RealmResults<E> allObjectsSorted(Class<E> clazz, String fieldName1,
                                                                boolean sortAscending1,
                                                               String fieldName2, boolean sortAscending2,
                                                               String fieldName3, boolean sortAscending3) {
@@ -1127,7 +1166,7 @@ public final class Realm implements Closeable {
      * @throws java.lang.IllegalArgumentException if a field name does not exist.
      */
     @Deprecated
-    public <E extends RealmObject> RealmResults<E> allObjects(Class<E> clazz, String fieldNames[], boolean sortAscending[]) {
+    public <E> RealmResults<E> allObjects(Class<E> clazz, String fieldNames[], boolean sortAscending[]) {
         // FIXME: This is not an optimal implementation. When core's Table::get_sorted_view() supports
         // FIXME: multi-column sorting, we can rewrite this method to a far better implementation.
         RealmResults<E> results = this.allObjects(clazz);
@@ -1145,7 +1184,7 @@ public final class Realm implements Closeable {
      * @return A sorted RealmResults containing the objects.
      * @throws java.lang.IllegalArgumentException if a field name does not exist.
      */
-    public <E extends RealmObject> RealmResults<E> allObjectsSorted(Class<E> clazz, String fieldNames[],
+    public <E> RealmResults<E> allObjectsSorted(Class<E> clazz, String fieldNames[],
                                                                boolean sortAscending[]) {
         // FIXME: This is not an optimal implementation. When core's Table::get_sorted_view() supports
         // FIXME: multi-column sorting, we can rewrite this method to a far better implementation.

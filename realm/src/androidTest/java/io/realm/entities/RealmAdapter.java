@@ -24,6 +24,7 @@ import android.widget.TextView;
 
 import io.realm.RealmBaseAdapter;
 import io.realm.RealmResults;
+import io.realm.annotations.RealmClass;
 
 public class RealmAdapter extends RealmBaseAdapter<AllTypes> implements ListAdapter {
 

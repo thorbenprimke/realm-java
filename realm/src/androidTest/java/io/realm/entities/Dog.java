@@ -21,8 +21,10 @@ import java.util.Date;
 
 import io.realm.RealmObject;
 import io.realm.annotations.Index;
+import io.realm.annotations.RealmClass;
 
-public class Dog extends RealmObject {
+@RealmClass
+public class Dog {
 
     @Index
     private String name;

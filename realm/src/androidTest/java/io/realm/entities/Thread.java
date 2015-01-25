@@ -16,9 +16,10 @@
 
 package io.realm.entities;
 
-import io.realm.RealmObject;
+import io.realm.annotations.RealmClass;
 
-public class Thread extends RealmObject {
+@RealmClass
+public class Thread {
     private String name;
 
     public String getName() {

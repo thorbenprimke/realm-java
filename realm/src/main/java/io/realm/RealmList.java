@@ -22,6 +22,7 @@ import java.util.List;
 
 import io.realm.exceptions.RealmException;
 import io.realm.internal.LinkView;
+import io.realm.internal.RealmProxy;
 import io.realm.internal.TableQuery;
 
 /**
@@ -32,7 +33,7 @@ import io.realm.internal.TableQuery;
  * @param <E> The class of objects in this list
  */
 
-public class RealmList<E extends RealmObject> extends AbstractList<E> {
+public class RealmList<E> extends AbstractList<E> {
 
     private static final String ONLY_IN_MANAGED_MODE_MESSAGE = "This method is only available in managed mode";
     private static final String NULL_OBJECTS_NOT_ALLOWED_MESSAGE = "RealmList does not accept null values";
@@ -78,7 +79,8 @@ public class RealmList<E extends RealmObject> extends AbstractList<E> {
     public void add(int location, E object) {
         assertValidObject(object);
         if (managedMode) {
-            view.insert(location, object.row.getIndex());
+            RealmProxy proxy = RealmUtil.getProxy(object);
+            view.insert(location, proxy.getRow().getIndex());
         } else {
             nonManagedList.add(location, object);
         }
@@ -91,7 +93,8 @@ public class RealmList<E extends RealmObject> extends AbstractList<E> {
     public boolean add(E object) {
         assertValidObject(object);
         if (managedMode) {
-            view.add(object.row.getIndex());
+            RealmProxy proxy = RealmUtil.getProxy(object);
+            view.add(proxy.getRow().getIndex());
         } else {
             nonManagedList.add(object);
         }
@@ -106,7 +109,8 @@ public class RealmList<E extends RealmObject> extends AbstractList<E> {
         assertValidObject(object);
         if (managedMode) {
             assertIndex(location);
-            view.set(location, object.row.getIndex());
+            RealmProxy proxy = RealmUtil.getProxy(object);
+            view.set(location, proxy.getRow().getIndex());
         } else {
             nonManagedList.set(location, object);
         }
@@ -254,7 +258,7 @@ public class RealmList<E extends RealmObject> extends AbstractList<E> {
         sb.append("@[");
         for (int i = 0; i < size(); i++) {
             if (managedMode) {
-                sb.append(get(i).row.getIndex());
+                sb.append(RealmUtil.getProxy(get(i)).getRow().getIndex());
             } else {
                 sb.append(System.identityHashCode(get(i)));
             }

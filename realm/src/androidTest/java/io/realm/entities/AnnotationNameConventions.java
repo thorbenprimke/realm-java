@@ -18,8 +18,10 @@ package io.realm.entities;
 
 
 import io.realm.RealmObject;
+import io.realm.annotations.RealmClass;
 
-public class AnnotationNameConventions extends RealmObject {
+@RealmClass
+public class AnnotationNameConventions {
     private long id_object;
     private long object_id;
     private boolean isObject;

@@ -20,7 +20,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.widget.BaseAdapter;
 
-public abstract class RealmBaseAdapter<T extends RealmObject> extends BaseAdapter {
+public abstract class RealmBaseAdapter<T> extends BaseAdapter {
 
     protected LayoutInflater inflater;
     protected RealmResults<T> realmResults;
