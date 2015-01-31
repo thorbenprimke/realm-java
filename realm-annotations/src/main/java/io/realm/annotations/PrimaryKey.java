@@ -30,9 +30,25 @@ import java.lang.annotation.Target;
  *
  * Only one field pr. model class can have this annotation and it is only allowed on the following
  * types: String, short, int, long
+ *
+ * Setting autoincrement only works for short, int and long fields and means that Realm automatically
+ * sets the value to max() + 1 for all objects of that type. The first object gets a primary key
+ * value of 1. If a autoincremented value hits the maximum value for the datatype a RealmException
+ * will be thrown, and no futher elements can be inserted. Trying to set the value manually will
+ * also result in a RealmException.
+ *
+ * Autoincremented keys are usually not needed, and adding them has a negative impact on
+ * disc space and creating and copying objects into Realm.
+ *
+ * Some rough estimates for creating new objects are (Nexus 5 w/ Lollipop 5.0.1):
+ *
+ * - Object with no primary key defined (baseline): 100%
+ * - Object with a long primary key: ???
+ * - Object with a string primary key: ???
+ * - Object with a autoincremented long primary key: ???
  */
 @Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.FIELD)
 public @interface PrimaryKey {
-
+    boolean autoincrement() default false;
 }

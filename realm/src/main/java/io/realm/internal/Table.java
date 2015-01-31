@@ -38,6 +38,9 @@ public class Table implements TableOrView, TableSchema, Closeable {
     private static final long PRIMARY_KEY_CLASS_COLUMN_INDEX = 0;
     private static final String PRIMARY_KEY_FIELD_COLUMN_NAME = "pk_property";
     private static final long PRIMARY_KEY_FIELD_COLUMN_INDEX = 1;
+    private static final String PRIMARY_KEY_AUTO_MAX_NAME = "pk_maxvalue";
+    private static final long PRIMARY_KEY_AUTO_MAX_INDEX = 2;
+
     private static final long NO_PRIMARY_KEY = -2;
 
     protected long nativePtr;
@@ -45,6 +48,7 @@ public class Table implements TableOrView, TableSchema, Closeable {
     protected final Object parent;
     private final Context context;
     private long cachedPrimaryKeyColumnIndex = NO_MATCH;
+    private long cachedAutoIncrementalMaxValue = 0;
 
     // test:
     protected int tableNo;
@@ -54,7 +58,6 @@ public class Table implements TableOrView, TableSchema, Closeable {
     static {
         TightDB.loadLibrary();
     }
-
 
     /**
      * Construct a Table base object. It can be used to register columns in this
@@ -356,12 +359,32 @@ public class Table implements TableOrView, TableSchema, Closeable {
 
     protected native void nativeMoveLastOver(long nativeTablePtr, long rowIndex);
 
-    // Row Handling methods.
+    /**
+     * Add a new empty row to Realm. All fields will have the default value for their datatype,
+     * except any field with a autoincrementeded primary key which will have the proper value.
+     *
+     * @return Row index for the new row in the table.
+     */
     public long addEmptyRow() {
         checkImmutable();
         if (hasPrimaryKey()) {
-            long primaryKeyColumnIndex = getPrimaryKey();
-            ColumnType type = getColumnType(primaryKeyColumnIndex);
+            return addEmptyRowWithPrimaryKey();
+        } else {
+            return nativeAddEmptyRow(nativePtr, 1);
+        }
+    }
+
+    private long addEmptyRowWithPrimaryKey() {
+        boolean isAutoincremental = isPrimaryKeyAutoincremental();
+        long primaryKeyColumnIndex = getPrimaryKey();
+        ColumnType type = getColumnType(primaryKeyColumnIndex);
+        long nextAutoIncrementValue = 0;
+        if (isAutoincremental) {
+            // Check first if a available autoincrement number is available. If not, we want to fail
+            // as fast as possible and before adding an empty row to Realm.
+            nextAutoIncrementValue = getNextIncrementalPrimaryKeyValue(primaryKeyColumnIndex);
+        } else {
+            // If not autoincremental, check if we can create an empty row
             switch(type) {
                 case STRING:
                     if (findFirstString(primaryKeyColumnIndex, STRING_DEFAULT_VALUE) != NO_MATCH) {
@@ -379,7 +402,27 @@ public class Table implements TableOrView, TableSchema, Closeable {
             }
         }
 
-        return nativeAddEmptyRow(nativePtr, 1);
+        // We are safe to create a new row
+        long rowIndex = nativeAddEmptyRow(nativePtr, 1);
+        if (nextAutoIncrementValue > 0) {
+            getRow(rowIndex).setLong(getPrimaryKey(), nextAutoIncrementValue);
+        }
+
+        return rowIndex;
+    }
+
+    // Update the integer column marked as a primary key to the next available value
+    private long getNextIncrementalPrimaryKeyValue(long primaryKeyColumnIndex) {
+        // TODO Should we cache this value and reset on commit. As write transactions are blocking we can manually count within a transaction instead of doing a search on each commit.
+        long maxValue = maximumLong(primaryKeyColumnIndex);
+        if (maxValue == Long.MIN_VALUE) {
+            maxValue = 0; // Core returns Long.MIN_VALUE if no objects exists.
+        };
+        if (maxValue == cachedAutoIncrementalMaxValue) {
+            throw new RealmException("Primary key value cannot be auto incremented. Maximum value has been reached.");
+        }
+
+        return maxValue + 1;
     }
 
     public long addEmptyRows(long rows) {
@@ -620,9 +663,12 @@ public class Table implements TableOrView, TableSchema, Closeable {
             if (pkTable == null) return NO_PRIMARY_KEY; // Free table = No primary key
             long rowIndex = pkTable.findFirstString(PRIMARY_KEY_CLASS_COLUMN_INDEX, getName());
             if (rowIndex != NO_MATCH) {
-                cachedPrimaryKeyColumnIndex = pkTable.getRow(rowIndex).getLong(PRIMARY_KEY_FIELD_COLUMN_INDEX);
+                Row row = pkTable.getRow(rowIndex);
+                cachedPrimaryKeyColumnIndex = row.getLong(PRIMARY_KEY_FIELD_COLUMN_INDEX);
+                cachedAutoIncrementalMaxValue = row.getLong(PRIMARY_KEY_AUTO_MAX_INDEX);
             } else {
                 cachedPrimaryKeyColumnIndex = NO_PRIMARY_KEY;
+                cachedAutoIncrementalMaxValue = 0;
             }
 
             return cachedPrimaryKeyColumnIndex;
@@ -645,6 +691,15 @@ public class Table implements TableOrView, TableSchema, Closeable {
      */
     public boolean hasPrimaryKey() {
         return getPrimaryKey() >= 0;
+    }
+
+    /**
+     * Check if a primary key field should auto increment its value
+     *
+     * @return true if yes, false if no or table has no primary key defined.
+     */
+    public boolean isPrimaryKeyAutoincremental() {
+        return hasPrimaryKey() && cachedAutoIncrementalMaxValue > 0;
     }
 
     void assertStringValueIsLegal(long columnIndex, long rowToUpdate, String value) {
@@ -1112,29 +1167,38 @@ public class Table implements TableOrView, TableSchema, Closeable {
      *
      * @param columnName    Name of the field that will function primary key. "" or <code>null</code>
      *                      will remove any previous set magic key.
-     *
+     * @param autoMaxValue  If x > 0. The primary key is defined as being autoincremented with the
+     *                      given maximum value. Trying to add objects after max is reached will
+     *                      result in a RealmException.
      * @throws              RealmException if it is not possible to set the primary key due to the
      *                      column not having distinct values (ie. violating the primary key
      *                      constaint).
      *
      */
-    public void setPrimaryKey(String columnName) {
+    public void setPrimaryKey(String columnName, long autoMaxValue) {
         Table pkTable = getPrimaryKeyTable();
         if (pkTable == null) throw new RealmException("Primary keys are only supported if Table is part of a Group");
 
         long rowIndex = pkTable.findFirstString(PRIMARY_KEY_CLASS_COLUMN_INDEX, getName());
         if (columnName == null || columnName.equals("")) {
-            if (rowIndex > 0) pkTable.remove(rowIndex);
+            if (rowIndex > 0) {
+                pkTable.remove(rowIndex);
+            }
             cachedPrimaryKeyColumnIndex = NO_PRIMARY_KEY;
         } else {
             long primaryKeyColumnIndex = getColumnIndex(columnName);
             assertIsValidPrimaryKeyColumn(primaryKeyColumnIndex);
+            if (autoMaxValue > 0 && getColumnType(primaryKeyColumnIndex) != ColumnType.INTEGER) {
+                autoMaxValue = 0;
+            }
             if (rowIndex == NO_MATCH) {
-                pkTable.add(getName(), primaryKeyColumnIndex);
+                pkTable.add(getName(), primaryKeyColumnIndex, autoMaxValue);
             } else {
                 pkTable.setLong(PRIMARY_KEY_FIELD_COLUMN_INDEX, rowIndex, primaryKeyColumnIndex);
+                pkTable.setLong(PRIMARY_KEY_AUTO_MAX_INDEX, rowIndex, autoMaxValue);
             }
 
+            cachedAutoIncrementalMaxValue = autoMaxValue;
             cachedPrimaryKeyColumnIndex = primaryKeyColumnIndex;
         }
     }
@@ -1188,6 +1252,11 @@ public class Table implements TableOrView, TableSchema, Closeable {
         if (pkTable.getColumnCount() == 0) {
             pkTable.addColumn(ColumnType.STRING, PRIMARY_KEY_CLASS_COLUMN_NAME);
             pkTable.addColumn(ColumnType.INTEGER, PRIMARY_KEY_FIELD_COLUMN_NAME);
+        }
+
+        // Upgrade with auto column
+        if (pkTable.getColumnCount() == 2) {
+            pkTable.addColumn(ColumnType.INTEGER, PRIMARY_KEY_AUTO_MAX_NAME);
         }
 
         return pkTable;

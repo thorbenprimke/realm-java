@@ -272,14 +272,14 @@ public class JNITransactions extends AndroidTestCase {
         Table tbl = trans.getTable("EmployeeTable");
         tbl.addColumn(ColumnType.STRING, "name");
         tbl.addColumn(ColumnType.INTEGER, "number");
-        tbl.setPrimaryKey("name");
+        tbl.setPrimaryKey("name", 0);
 
         tbl.add("Foo", 42);
         try {
             tbl.add("Foo", 41);
         } catch (RealmException e1) {
             // Primary key check worked, now remove it and try again.
-            tbl.setPrimaryKey("");
+            tbl.setPrimaryKey("", 0);
             try {
                 tbl.add("Foo", 41);
                 return;
@@ -298,7 +298,7 @@ public class JNITransactions extends AndroidTestCase {
         WriteTransaction trans = db.beginWrite();
         Table tbl = trans.getTable("EmployeeTable");
         tbl.addColumn(ColumnType.STRING, "name");
-        tbl.setPrimaryKey("name");
+        tbl.setPrimaryKey("name", 0);
 
         // Create first entry with name "foo"
         tbl.setString(0, tbl.addEmptyRow(), "Foo");
@@ -307,7 +307,7 @@ public class JNITransactions extends AndroidTestCase {
         try {
             tbl.setString(0, rowIndex, "Foo"); // Try to create 2nd entry with name Foo
         } catch (RealmException e1) {
-            tbl.setPrimaryKey(""); // Primary key check worked, now remove it and try again.
+            tbl.setPrimaryKey("", 0); // Primary key check worked, now remove it and try again.
             try {
                 tbl.setString(0, rowIndex, "Foo");
                 return;

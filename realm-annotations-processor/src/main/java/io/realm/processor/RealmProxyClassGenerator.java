@@ -21,18 +21,8 @@ import com.squareup.javawriter.JavaWriter;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.EnumSet;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Map;
-
-import java.lang.Override;
-import java.lang.String;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -49,6 +39,8 @@ import javax.lang.model.type.TypeMirror;
 import javax.lang.model.util.Elements;
 import javax.lang.model.util.Types;
 import javax.tools.JavaFileObject;
+
+import io.realm.annotations.PrimaryKey;
 
 public class RealmProxyClassGenerator {
     private ProcessingEnvironment processingEnvironment;
@@ -253,9 +245,7 @@ public class RealmProxyClassGenerator {
                 // Getter
                 writer.emitAnnotation("Override");
                 writer.beginMethod(fieldTypeCanonicalName, getters.get(fieldName), EnumSet.of(Modifier.PUBLIC));
-                writer.emitStatement(
-                        "realm.checkIfValid()"
-                );
+                writer.emitStatement("realm.checkIfValid()");
                 writer.emitStatement(
                         "return (%s) row.get%s(Realm.columnIndices.get(\"%s\").get(\"%s\"))",
                         fieldTypeCanonicalName, realmType, className, fieldName);
@@ -265,13 +255,17 @@ public class RealmProxyClassGenerator {
                 // Setter
                 writer.emitAnnotation("Override");
                 writer.beginMethod("void", setters.get(fieldName), EnumSet.of(Modifier.PUBLIC), fieldTypeCanonicalName, "value");
-                writer.emitStatement(
-                        "realm.checkIfValid()"
-                );
-                writer.emitStatement(
-                        "row.set%s(Realm.columnIndices.get(\"%s\").get(\"%s\"), (%s) value)",
-                        realmType, className, fieldName, castingType);
+                writer.emitStatement("realm.checkIfValid()");
+                if (primaryKey != null && primaryKey.getAnnotation(PrimaryKey.class).autoincrement()) {
+                    writer.emitStatement("throw new IllegalStateException(\"This field is marked as autoincremented and cannot be edited.\")");
+                } else {
+                    writer.emitStatement(
+                            "row.set%s(Realm.columnIndices.get(\"%s\").get(\"%s\"), (%s) value)",
+                            realmType, className, fieldName, castingType
+                    );
+                }
                 writer.endMethod();
+
             } else if (typeUtils.isAssignable(field.asType(), realmObject)) {
                 /**
                  * Links
@@ -298,6 +292,7 @@ public class RealmProxyClassGenerator {
                 writer.endControlFlow();
                 writer.emitStatement("row.setLink(Realm.columnIndices.get(\"%s\").get(\"%s\"), value.row.getIndex())", className, fieldName);
                 writer.endMethod();
+
             } else if (typeUtils.isAssignable(field.asType(), realmList)) {
                 /**
                  * LinkLists
@@ -375,9 +370,20 @@ public class RealmProxyClassGenerator {
 
         if (primaryKey != null) {
             String fieldName = primaryKey.getSimpleName().toString();
-            writer.emitStatement("table.setPrimaryKey(\"%s\")", fieldName);
+            String maxValue = "0";
+            if (primaryKey.getAnnotation(PrimaryKey.class).autoincrement()) {
+                String type = primaryKey.asType().toString();
+                if (type.equals("short")) {
+                    maxValue = "Short.MAX_VALUE";
+                } else if (type.equals("int")) {
+                    maxValue = "Integer.MAX_VALUE";
+                } else if (type.equals("long")) {
+                    maxValue = "Long.MAX_VALUE";
+                }
+            }
+            writer.emitStatement("table.setPrimaryKey(\"%s\", %s)", fieldName, maxValue);
         } else {
-            writer.emitStatement("table.setPrimaryKey(\"\")");
+            writer.emitStatement("table.setPrimaryKey(\"\", 0)");
         }
 
         writer.emitStatement("return table");

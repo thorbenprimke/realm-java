@@ -20,9 +20,13 @@ import android.test.AndroidTestCase;
 
 import io.realm.entities.AnnotationNameConventions;
 import io.realm.entities.AnnotationTypes;
+import io.realm.entities.AutoincrementInt;
+import io.realm.entities.AutoincrementLong;
+import io.realm.entities.AutoincrementShort;
 import io.realm.entities.PrimaryKeyAsLong;
 import io.realm.entities.PrimaryKeyAsString;
 import io.realm.exceptions.RealmException;
+import io.realm.internal.Row;
 import io.realm.internal.Table;
 
 public class RealmAnnotationTest extends AndroidTestCase {
@@ -71,7 +75,7 @@ public class RealmAnnotationTest extends AndroidTestCase {
         }
 
         Table table = testRealm.getTable(PrimaryKeyAsString.class);
-        table.setPrimaryKey("id");
+        table.setPrimaryKey("id", 0);
         assertEquals(1, table.getPrimaryKey());
         testRealm.cancelTransaction();
     }
@@ -87,7 +91,7 @@ public class RealmAnnotationTest extends AndroidTestCase {
 
         Table table = testRealm.getTable(PrimaryKeyAsString.class);
         try {
-            table.setPrimaryKey("id");
+            table.setPrimaryKey("id", 0);
             fail("It should not be possible to set a primary key column which already contains duplicate values.");
         } catch (RealmException expected) {
             assertEquals(0, table.getPrimaryKey());
@@ -106,7 +110,7 @@ public class RealmAnnotationTest extends AndroidTestCase {
         }
 
         Table table = testRealm.getTable(PrimaryKeyAsLong.class);
-        table.setPrimaryKey("name");
+        table.setPrimaryKey("name", 0);
         assertEquals(1, table.getPrimaryKey());
         testRealm.cancelTransaction();
     }
@@ -122,7 +126,7 @@ public class RealmAnnotationTest extends AndroidTestCase {
 
         Table table = testRealm.getTable(PrimaryKeyAsLong.class);
         try {
-            table.setPrimaryKey("name");
+            table.setPrimaryKey("name", 0);
             fail("It should not be possible to set a primary key column which already contains duplicate values.");
         } catch (RealmException expected) {
             assertEquals(0, table.getPrimaryKey());
@@ -177,6 +181,77 @@ public class RealmAnnotationTest extends AndroidTestCase {
         assertTrue(table.hasPrimaryKey());
         assertTrue(table.hasIndex(0));
     }
+
+    public void testAutoincrement() {
+        testRealm.beginTransaction();
+        AutoincrementLong obj = testRealm.createObject(AutoincrementLong.class);
+        testRealm.commitTransaction();
+        assertEquals(1, obj.getId());
+    }
+
+    public void testSetAutoincrementedFieldThrows() {
+        testRealm.beginTransaction();
+        try {
+            AutoincrementLong obj = testRealm.createObject(AutoincrementLong.class);
+            obj.setId(2);
+            fail("Manually setting a autoincremented field should fail");
+        } catch (IllegalStateException expected) {
+        } finally {
+            testRealm.cancelTransaction();
+        }
+    }
+
+    public void testAutoincrementedLongOverflowThrows() {
+        testRealm.beginTransaction();
+
+        // Manually create object with MAX_VALUE to avoid other safety measures
+        Table table = testRealm.getTable(AutoincrementLong.class);
+        Row row = table.getRow(table.addEmptyRow());
+        row.setLong(0, Long.MAX_VALUE);
+
+        try {
+            testRealm.createObject(AutoincrementLong.class);
+            fail("long have overflown and should throw an exception");
+        } catch (RealmException expected) {
+        } finally {
+            testRealm.cancelTransaction();
+        }
+    }
+
+    public void testAutoincrementedIntOverflowThrows() {
+        testRealm.beginTransaction();
+
+        // Manually create object with MAX_VALUE to avoid other safety measures
+        Table table = testRealm.getTable(AutoincrementInt.class);
+        Row row = table.getRow(table.addEmptyRow());
+        row.setLong(0, Integer.MAX_VALUE);
+
+        try {
+            testRealm.createObject(AutoincrementInt.class);
+            fail("int have overflown and should throw an exception");
+        } catch (RealmException expected) {
+        } finally {
+            testRealm.cancelTransaction();
+        }
+    }
+
+    public void testAutoincrementedShortOverflowThrows() {
+        testRealm.beginTransaction();
+
+        // Manually create object with MAX_VALUE to avoid other safety measures
+        Table table = testRealm.getTable(AutoincrementShort.class);
+        Row row = table.getRow(table.addEmptyRow());
+        row.setLong(0, Short.MAX_VALUE);
+
+        try {
+            testRealm.createObject(AutoincrementShort.class);
+            fail("short have overflown and should throw an exception");
+        } catch (RealmException expected) {
+        } finally {
+            testRealm.cancelTransaction();
+        }
+    }
+
 
     // Annotation processor honors common naming conventions
     // We check if setters and getters are generated and working

@@ -144,4 +144,20 @@ public class RealmProcessorTest {
                 .and()
                 .generatesSources(booleansProxy);
     }
+
+    @Test
+    public void compileIllegalPrimaryKeyFails() throws Exception {
+        ASSERT.about(javaSource())
+                .that(JavaFileObjects.forResource("some/test/IllegalPrimaryKey.java"))
+                .processedWith(new RealmProcessor())
+                .failsToCompile();
+    }
+
+    @Test
+    public void compileIllegalAutoincrementFails() throws Exception {
+        ASSERT.about(javaSource())
+                .that(JavaFileObjects.forResource("some/test/IllegalAutoincrementedPrimaryKey.java"))
+                .processedWith(new RealmProcessor())
+                .failsToCompile();
+    }
 }
