@@ -19,6 +19,7 @@ package io.realm.examples.intro.model;
 import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.Ignore;
+import io.realm.annotations.PrimaryKey;
 
 // Your model just have to extend RealmObject.
 // This will inherit an annotation which produces proxy getters and setters for all fields.
@@ -38,9 +39,19 @@ public class Person extends RealmObject {
     @Ignore
     private int tempReference;
 
+    @PrimaryKey
     private long id;
 
-    // The standard getters and setters your IDE generates are fine.
+  public Person() {
+  }
+
+  public Person(String name, Dog dog, long id) {
+    this.name = name;
+    this.dog = dog;
+    this.id = id;
+  }
+
+// The standard getters and setters your IDE generates are fine.
     // Realm will overload them and code inside them is ignored.
     // So if you prefer you can also just have empty abstract methods.
 

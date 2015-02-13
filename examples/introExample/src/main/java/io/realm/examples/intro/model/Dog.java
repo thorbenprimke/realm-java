@@ -17,8 +17,13 @@
 package io.realm.examples.intro.model;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 public class Dog extends RealmObject {
+
+    @PrimaryKey
+    private long id;
+
     private String name;
 
     public String getName() {
@@ -28,4 +33,20 @@ public class Dog extends RealmObject {
     public void setName(String name) {
         this.name = name;
     }
+
+  public long getId() {
+    return id;
+  }
+
+  public void setId(long id) {
+    this.id = id;
+  }
+
+  public Dog(long id, String name) {
+    this.id = id;
+    this.name = name;
+  }
+
+  public Dog() {
+  }
 }
