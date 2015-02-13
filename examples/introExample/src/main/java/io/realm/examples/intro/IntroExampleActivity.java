@@ -17,11 +17,13 @@
 package io.realm.examples.intro;
 
 import android.app.Activity;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
@@ -50,25 +52,28 @@ public class IntroExampleActivity extends Activity {
         // Open the default realm ones for the UI thread.
         realm = Realm.getInstance(this);
 
-        basicCRUD(realm);
-        basicQuery(realm);
-        basicLinkQuery(realm);
 
-        // More complex operations can be executed on another thread.
-        new AsyncTask<Void, Void, String>() {
-            @Override
-            protected String doInBackground(Void... voids) {
-                String info = null;
-                info = complexReadWrite();
-                info += complexQuery();
-                return info;
-            }
+      primaryKeyExample(realm);
 
-            @Override
-            protected void onPostExecute(String result) {
-                showStatus(result);
-            }
-        }.execute();
+//        basicCRUD(realm);
+//        basicQuery(realm);
+//        basicLinkQuery(realm);
+//
+//        // More complex operations can be executed on another thread.
+//        new AsyncTask<Void, Void, String>() {
+//            @Override
+//            protected String doInBackground(Void... voids) {
+//                String info = null;
+//                info = complexReadWrite();
+//                info += complexQuery();
+//                return info;
+//            }
+//
+//            @Override
+//            protected void onPostExecute(String result) {
+//                showStatus(result);
+//            }
+//        }.execute();
     }
 
     @Override
@@ -82,6 +87,35 @@ public class IntroExampleActivity extends Activity {
         TextView tv = new TextView(this);
         tv.setText(txt);
         rootLayout.addView(tv);
+    }
+
+
+    private void primaryKeyExample(Realm realm) {
+      showStatus("Primary Key Example Starting");
+
+      Dog dog = new Dog(1, "Snoop");
+      Dog dog2 = new Dog(2, "Dooog");
+      Person person1 = new Person("Joe", dog, 1);
+      Person person2 = new Person("Ashley", dog, 2);
+
+      List<Person> people = new ArrayList<Person>();
+      people.add(person1);
+      people.add(person2);
+
+      showStatus("Objects crated");
+
+      realm.beginTransaction();
+      realm.copyToRealmOrUpdate(people);
+      realm.commitTransaction();
+
+      showStatus("Added to realm");
+
+      realm.beginTransaction();
+      realm.clear(Person.class);
+      realm.clear(Dog.class);
+      realm.commitTransaction();
+
+      showStatus("Cleared realm");
     }
 
     private void basicCRUD(Realm realm) {
