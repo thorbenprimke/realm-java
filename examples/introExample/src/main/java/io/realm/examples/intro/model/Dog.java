@@ -26,6 +26,8 @@ public class Dog extends RealmObject {
 
     private String name;
 
+  private Person dogFriend;
+
     public String getName() {
         return name;
     }
@@ -48,5 +50,13 @@ public class Dog extends RealmObject {
   }
 
   public Dog() {
+  }
+
+  public Person getDogFriend() {
+    return dogFriend;
+  }
+
+  public void setDogFriend(Person dogFriend) {
+    this.dogFriend = dogFriend;
   }
 }

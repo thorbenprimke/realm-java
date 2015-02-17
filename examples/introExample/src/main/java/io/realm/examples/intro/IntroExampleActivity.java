@@ -22,14 +22,13 @@ import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.examples.intro.model.Cat;
 import io.realm.examples.intro.model.Dog;
+import io.realm.examples.intro.model.OtherData;
 import io.realm.examples.intro.model.Person;
+import io.realm.examples.intro.model.Town;
 
 
 public class IntroExampleActivity extends Activity {
@@ -94,18 +93,22 @@ public class IntroExampleActivity extends Activity {
       showStatus("Primary Key Example Starting");
 
       Dog dog = new Dog(1, "Snoop");
-      Dog dog2 = new Dog(2, "Dooog");
       Person person1 = new Person("Joe", dog, 1);
-      Person person2 = new Person("Ashley", dog, 2);
 
-      List<Person> people = new ArrayList<Person>();
-      people.add(person1);
-      people.add(person2);
+      OtherData otherData = new OtherData();
+      otherData.setInfo("Dummy Info");
+      otherData.setPerson(person1);
 
-      showStatus("Objects crated");
+      Town town = new Town("1", "SF");
+      // Adds the person1 directly to the town
+      town.setTownOwner(person1);
+      // Adds otherData which contains the same person1 as added directly to the town
+      town.setOtherData(otherData);
+
+      showStatus("Objects created");
 
       realm.beginTransaction();
-      realm.copyToRealmOrUpdate(people);
+      realm.copyToRealmOrUpdate(town);
       realm.commitTransaction();
 
       showStatus("Added to realm");
